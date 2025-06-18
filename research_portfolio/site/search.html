@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html data-bs-theme="">
     <head>
                 <title>Dakota's Portfolio</title>
 
@@ -14,12 +14,14 @@
             
                 <link  rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
             
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-                        <script>hljs.initHighlightingOnLoad();</script>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
             <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="./assets/css/root.min.css">
             <link rel="stylesheet" href="./assets/css/main.min.css">
+            <link rel="stylesheet" href="./assets/css/media.min.css">
+            <link rel="stylesheet" href="./assets/css/mkdocstrings.min.css">
                 <script src="./search/main.js"></script>
 
             
@@ -67,6 +69,10 @@
                         </li>
                         <li class="nav-item">
                             <a class="
+                            nav-link text-gray text-decoration-none" href="./index-old/">[Home Page]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
                             nav-link text-gray text-decoration-none" href="./teaching/">[Teaching]</a>
                         </li>
             </ul>
@@ -107,27 +113,38 @@
     </div>
 </div>
 <!-- endblock -->
-    <!-- block search -->
-	<section class="p-md-5 content-search">
-		<article class="search-box">
-			<p></p>
-			<h1 id="search">Search Results</h1>
-			<hr>
 
-			<form id="content_search" action="search.html">
-				<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
-				<input name="q" id="mkdocs-search-query" type="text" class="search-query search_input search-query ui-autocomplete-input"
-					placeholder="Search the Docs" autocomplete="off" autofocus title="Type search term here">
-			</form>
+                
 
-			<div id="mkdocs-search-results" class="search-results" data-no-results-text="No results found">
-				Searching...
-			</div>
 
-		</article>
-	</section>
-    <!-- endblock -->
+	
+<!-- block search -->
+<section class="p-md-5 content-search">
+	<article class="search-box">
+		<p></p>
+		<h1 id="search">Search Results</h1>
+		<hr>
 
+		<form id="content_search" action="./search.html">
+			<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+			<input name="q" id="mkdocs-search-query" type="text" class="search-query search_input search-query ui-autocomplete-input"
+				placeholder="Search the Docs" autocomplete="off" autofocus title="Type search term here">
+		</form>
+
+		<div id="mkdocs-search-results" class="search-results" data-no-results-text="No results found">
+			Searching...
+		</div>
+
+	</article>
+</section>
+<!-- endblock -->
+
+
+
+
+
+                
+                
             </main>
 
             

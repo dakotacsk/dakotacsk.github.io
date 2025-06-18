@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html data-bs-theme="">
     <head>
                 <title>ML&DS - Dakota's Portfolio</title>
 
@@ -14,12 +14,14 @@
             
                 <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
             
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-                        <script>hljs.initHighlightingOnLoad();</script>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
             <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../assets/css/root.min.css">
             <link rel="stylesheet" href="../assets/css/main.min.css">
+            <link rel="stylesheet" href="../assets/css/media.min.css">
+            <link rel="stylesheet" href="../assets/css/mkdocstrings.min.css">
                 <script src="../search/main.js"></script>
 
             
@@ -67,6 +69,10 @@
                         </li>
                         <li class="nav-item">
                             <a class="
+                            nav-link text-gray text-decoration-none" href="../index-old/">[Home Page]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
                             nav-link text-gray text-decoration-none" href="../teaching/">[Teaching]</a>
                         </li>
             </ul>
@@ -107,8 +113,10 @@
     </div>
 </div>
 <!-- endblock -->
-                    <!-- block content -->
-<section class="container post">
+
+                
+                        <!-- block content -->
+<section class="container post" id="component-content">
     <article>
         <header>
             
@@ -118,8 +126,70 @@
         <p><!-- -->
 
 <hr />
+<h3 id="nuggy-ai-powered-dynamic-pricing-for-cannabis-retail">Nuggy - AI-Powered Dynamic Pricing for Cannabis Retail</h3>
+<ul>
+<li>
+<p><strong>Role</strong>: Co-Founder (May 2025 - Present)</p>
+</li>
+<li>
+<p><strong>Description</strong>: Building an AI platform that helps cannabis dispensaries optimize their pricing strategies through machine learning. Working on developing intelligent algorithms to analyze market dynamics and provide actionable pricing recommendations.</p>
+</li>
+<li>
+<p><strong>Status</strong>: Currently in stealth mode, working with early pilot partners to refine the product</p>
+</li>
+<li>
+<p><strong>Link</strong>: <a href="https://nuggy.io">Learn more about Nuggy</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="agricultural-pest-detection-system-barn-owls-technology">Agricultural Pest Detection System - Barn Owls Technology</h3>
+<ul>
+<li>
+<p><strong>Role</strong>: Machine Learning &amp; Operations Intern (Dec 2024 - May 2025)</p>
+</li>
+<li>
+<p><strong>Description</strong>: Sole ML engineer at &lt;10-person ag-tech startup, developing computer vision solution for automated pest detection and classification in agricultural settings.</p>
+</li>
+<li>
+<p><strong>Technical Implementation</strong>:</p>
+</li>
+<li>Trained YOLOv11 model achieving <strong>90%+ accuracy</strong> in detecting and classifying crop pests</li>
+<li>Containerized service with Docker and deployed on AWS EC2 instances</li>
+<li>Built REST API with Flask, persisting predictions to PostgreSQL</li>
+<li>
+<p>Implemented real-time inference pipeline processing images from IoT devices</p>
+</li>
+<li>
+<p><strong>Impact</strong>: Deployed to production across <strong>14 farms</strong> supporting 5-20 IoT imaging devices per site, enabling real-time pest monitoring and early intervention for growers</p>
+</li>
+</ul>
+<hr />
+<h3 id="ocr-cost-optimization-indico-data">OCR Cost Optimization - Indico Data</h3>
+<ul>
+<li>
+<p><strong>Role</strong>: Machine Learning Intern (May 2025 - Present)</p>
+</li>
+<li>
+<p><strong>Description</strong>: Engineered solutions to optimize OCR inference costs while maintaining model performance at enterprise scale.</p>
+</li>
+<li>
+<p><strong>Technical Implementation</strong>:</p>
+</li>
+<li>Benchmarked Indico's pipeline against DSPy framework, achieving <strong>12% cost reduction</strong> in prompt training</li>
+<li>Built Streamlit-based "Studio Assistant" providing instant prompt quality feedback via LLMs</li>
+<li>
+<p>Implemented A/B testing framework to validate F1 score maintenance</p>
+</li>
+<li>
+<p><strong>Impact</strong>: Delivered significant cost savings for enterprise clients without sacrificing model accuracy</p>
+</li>
+</ul>
+<hr />
 <h3 id="neoviews-predicting-soccer-player-locations">NeoViews - Predicting Soccer Player Locations</h3>
 <ul>
+<li>
+<p><strong>Role</strong>: ML Fellow @ Break Through Tech AI - MIT</p>
+</li>
 <li>
 <p><strong>Description</strong>: Developed a Long Short-Term Memory (LSTM) model to accurately predict soccer player locations throughout an entire match, achieving a prediction accuracy within 10 meters. Benchmarked the model against various optimization methods, including Bayesian optimization and linear regression, to evaluate performance improvements and accuracy.</p>
 </li>
@@ -177,23 +247,25 @@
     </article>
 </section>
 <!-- endblock -->
+                
+                
             </main>
 
             
                     <!-- block preview -->
-        <div class="row row-cols-md-3 text-center pt-md-3" id="component-preview">
-            <div class="col themed-grid-col">
-                <a rel="prev" href=".." class="nav-link">
-                    <i class="fa fa-arrow-left"></i> Previous
-                </a>
-            </div>
-            <div class="col themed-grid-col"></div>
-            <div class="col themed-grid-col">
-                <a rel="next" href="../WebDev/" class="nav-link">
-                    Next <i class="fa fa-arrow-right"></i>
-                </a>
-            </div>
+    <div class="preview row row-cols-md-3 text-center pt-md-3" id="component-preview">
+        <div class="col themed-grid-col">
+            <a rel="prev" href=".." class="nav-link">
+                <i class="fa fa-arrow-left"></i> Previous
+            </a>
         </div>
+        <div class="col themed-grid-col"></div>
+        <div class="col themed-grid-col">
+            <a rel="next" href="../WebDev/" class="nav-link">
+                Next <i class="fa fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
 <!-- endblock -->
             
 
