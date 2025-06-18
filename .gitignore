@@ -50,7 +50,8 @@ wheels/
 *.egg
 
 # MkDocs
-site/
+# NOTE: research_portfolio/site is kept for GitHub Pages
+# site/
 .cache/
 
 # Node
