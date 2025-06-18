@@ -49,7 +49,8 @@ body {
   background-color: black;
   background-image: url("https://24.media.tumblr.com/007183c1d6184426be7aa22b4dab1249/tumblr_mrhdolq79Z1rsuta1o1_500.gif");
   background-attachment: fixed;
-  background-size: cover;
+  background-repeat: repeat;
+  background-size: auto;
   cursor: crosshair;
   line-height: 1.4;
   min-height: 100vh;
@@ -112,6 +113,8 @@ ul, ol {
   max-width: 850px;
   margin: 0 auto;
   padding: var(--spacing-md);
+  position: relative;
+  z-index: 10;
 }
 
 /* Animated Hearts */
@@ -122,13 +125,27 @@ ul, ol {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 1;
+  z-index: 5;
+  overflow: visible;
 }
 
 .animated-heart {
   position: absolute;
-  animation: fall-fade 15s infinite ease-in-out;
+  -webkit-animation: fall-fade 15s infinite linear;
+  animation: fall-fade 15s infinite linear;
   opacity: 0;
+  will-change: transform, opacity;
+  width: 125px;
+  height: 125px;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated-heart img {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(330deg) brightness(104%) contrast(97%);
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .animated-heart:nth-child(1) {
@@ -141,10 +158,42 @@ ul, ol {
   animation-delay: 5s;
 }
 
+@-webkit-keyframes fall-fade {
+  0% {
+    -webkit-transform: translateY(-20vh) translateX(0);
+    transform: translateY(-20vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.9;
+    -webkit-transform: translateY(10vh) translateX(40px);
+    transform: translateY(10vh) translateX(40px);
+  }
+  70% {
+    opacity: 0.8;
+    -webkit-transform: translateY(70vh) translateX(0);
+    transform: translateY(70vh) translateX(0);
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: translateY(110vh) translateX(0);
+    transform: translateY(110vh) translateX(0);
+    opacity: 0;
+  }
+}
+
 @keyframes fall-fade {
   0% {
-    transform: translateY(-100vh) translateX(0);
+    transform: translateY(-20vh) translateX(0);
     opacity: 0;
+  }
+  10% {
+    opacity: 1;
   }
   15% {
     opacity: 0.9;
@@ -154,8 +203,11 @@ ul, ol {
     opacity: 0.8;
     transform: translateY(70vh) translateX(0);
   }
+  90% {
+    opacity: 0.3;
+  }
   100% {
-    transform: translateY(100vh) translateX(0);
+    transform: translateY(110vh) translateX(0);
     opacity: 0;
   }
 }
@@ -167,7 +219,7 @@ ul, ol {
   padding: var(--spacing-md) var(--spacing-lg);
   margin: var(--spacing-lg) 0;
   position: relative;
-  z-index: 100; /* Increased z-index */
+  z-index: 20;
   min-height: 50px;
 }
 
@@ -544,7 +596,7 @@ main {
   height: 60px;
   overflow: hidden;
   transition: width var(--transition-base);
-  z-index: 100;
+  z-index: 30;
 }
 
 .music-player:hover {
