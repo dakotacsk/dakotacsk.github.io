@@ -25,10 +25,10 @@
           </pre>
         </div>
         <nav class="nav-bar">
-          <a href="#about" class="nav-link">[ABOUT]</a>
-          <a href="#experience" class="nav-link">[EXPERIENCE]</a>
-          <a href="#projects" class="nav-link">[PROJECTS]</a>
-          <a href="#skills" class="nav-link">[SKILLS]</a>
+          <a href="portfolio.html" class="nav-link active">[HOME]</a>
+          <a href="projects.html" class="nav-link">[ML/AI]</a>
+          <a href="webdev.html" class="nav-link">[WEBDEV]</a>
+          <a href="teaching.html" class="nav-link">[TEACHING]</a>
           <a href="#contact" class="nav-link">[CONTACT]</a>
         </nav>
       </div>
@@ -102,7 +102,7 @@
     <section id="experience" class="section experience-section">
       <div class="window">
         <div class="window-header">
-          <h2><i class="fas fa-briefcase"></i> experience.log</h2>
+          <h2><i class="fas fa-briefcase"></i> recent_experience.log</h2>
         </div>
         <div class="window-content">
           <div class="timeline">
@@ -196,75 +196,96 @@
                 </div>
               </div>
             </div>
+
+            <!-- Olin -->
+            <div class="timeline-item">
+              <div class="timeline-date">Dec 2024 - May 2025</div>
+              <div class="timeline-content">
+                <h3>Machine Learning Researcher @ Olin College of Engineering</h3>
+                <p class="role-description">Engineered and deployed an ensemble ML pipeline that autonomously optimizes HVAC set-points across multi-story commercial facilities</p>
+                <ul class="achievements">
+                  <li>Engineered and deployed an ensemble ML pipeline that autonomously optimizes HVAC set-points across multi-story commercial facilities</li>
+                  <li>Integrated models into a Python microservice stack (PyTorch, scikit-learn, NumPy) and conducted A/B simulations projecting >$6K in annual energy cost savings.</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">Reinforcement Learning</span>
+                  <span class="tag">Variational Auto-Encoder</span>
+                  <span class="tag">Gradient-Boosted Regression</span>
+                  <span class="tag">LSTM</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bootstrap -->
+            <div class="timeline-item">
+              <div class="timeline-date">Jun 2022 - Sep 2022</div>
+              <div class="timeline-content">
+                <h3>Machine Learning Intern @ Bootstrap</h3>
+                <p class="role-description">Developed ML curriculum for K-12 education</p>
+                <ul class="achievements">
+                  <li>Developed machine-learning classes for students aged 12-18 using Pyret coding language</li>
+                  <li>Collaborated with computer science teachers to simplify machine learning algorithms</li>
+                  <li>Created a series of educational materials to complement the classes</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">Pyret</span>
+                  <span class="tag">Machine Learning</span>
+                  <span class="tag">Education Tech</span>
+                  <span class="tag">Curriculum Design</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- The Coaching Dot -->
+            <div class="timeline-item">
+              <div class="timeline-date">Dec 2020 - Mar 2021</div>
+              <div class="timeline-content">
+                <h3>Team Manager @ The Coaching Dot</h3>
+                <p class="role-description">Promoted from unpaid intern to Team Manager</p>
+                <ul class="achievements">
+                  <li>Managed web team as an unpaid intern, leading to promotion as Team Manager</li>
+                  <li>Oversaw data analysis and A.I. team as a paid intern, driving innovation and efficiency</li>
+                  <li>Spearheaded projects to enhance website functionality and optimize data analysis processes</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">Team Management</span>
+                  <span class="tag">Data Analysis</span>
+                  <span class="tag">Web Development</span>
+                  <span class="tag">AI/ML</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Quick Projects Overview -->
     <section id="projects" class="section projects-section">
       <div class="window">
         <div class="window-header">
-          <h2><i class="fas fa-code-branch"></i> projects.git</h2>
+          <h2><i class="fas fa-code-branch"></i> featured_work.git</h2>
         </div>
         <div class="window-content">
-          <div class="projects-grid">
-            <!-- HVAC Project -->
-            <div class="project-card">
-              <div class="project-header">
-                <h3>HVAC System Optimization</h3>
-                <span class="project-status live">DEPLOYED</span>
-              </div>
-              <p class="project-description">
-                Engineered ensemble ML pipeline for autonomous HVAC optimization using Offline RL, VAE, GBR, and LSTM.
-              </p>
-              <div class="project-impact">
-                <i class="fas fa-chart-line"></i> Projected $6K+ annual energy savings
-              </div>
-              <div class="project-tech">
-                <span class="tech-pill">PyTorch</span>
-                <span class="tech-pill">Reinforcement Learning</span>
-                <span class="tech-pill">Python</span>
-              </div>
-            </div>
-
-            <!-- Soccer Prediction -->
-            <div class="project-card">
-              <div class="project-header">
-                <h3>NeoViews - Soccer Analytics</h3>
-                <span class="project-status">RESEARCH</span>
-              </div>
-              <p class="project-description">
-                Developed LSTM model to predict soccer player positions with <10m mean absolute error.
-              </p>
-              <div class="project-impact">
-                <i class="fas fa-futbol"></i> Break Through Tech AI @ MIT
-              </div>
-              <div class="project-tech">
-                <span class="tech-pill">LSTM</span>
-                <span class="tech-pill">Time Series</span>
-                <span class="tech-pill">Sports Analytics</span>
-              </div>
-            </div>
-
-            <!-- Public Interest Tech -->
-            <div class="project-card">
-              <div class="project-header">
-                <h3>LLM Benchmarking Research</h3>
-                <span class="project-status">PUBLISHED</span>
-              </div>
-              <p class="project-description">
-                Led research team developing methods for benchmarking LLM models. Abstract and poster published at AAAS.
-              </p>
-              <div class="project-impact">
-                <i class="fas fa-users"></i> President, Public Interest Tech Team
-              </div>
-              <div class="project-tech">
-                <span class="tech-pill">LLMs</span>
-                <span class="tech-pill">Research</span>
-                <span class="tech-pill">Leadership</span>
-              </div>
-            </div>
+          <div class="quick-links">
+            <a href="projects.html" class="category-card">
+              <i class="fas fa-brain"></i>
+              <h3>ML & AI Projects</h3>
+              <p>HVAC optimization, computer vision, NLP research</p>
+              <span class="link-arrow">View All →</span>
+            </a>
+            <a href="webdev.html" class="category-card">
+              <i class="fas fa-code"></i>
+              <h3>Web Development</h3>
+              <p>Interactive sites, data visualization, creative coding</p>
+              <span class="link-arrow">View All →</span>
+            </a>
+            <a href="teaching.html" class="category-card">
+              <i class="fas fa-chalkboard-teacher"></i>
+              <h3>Teaching & Education</h3>
+              <p>Workshops, curriculum development, youth coding</p>
+              <span class="link-arrow">View All →</span>
+            </a>
           </div>
         </div>
       </div>
@@ -311,16 +332,16 @@
             <div class="skill-category">
               <h3>Tools & Technologies</h3>
               <div class="tech-grid">
-                <span class="tech-item">Docker</span>
-                <span class="tech-item">AWS</span>
-                <span class="tech-item">Kubernetes</span>
-                <span class="tech-item">Git</span>
-                <span class="tech-item">PostgreSQL</span>
-                <span class="tech-item">MATLAB</span>
-                <span class="tech-item">Java</span>
-                <span class="tech-item">R</span>
-                <span class="tech-item">Julia</span>
-                <span class="tech-item">C++</span>
+                <span class="tech-item"><i class="fab fa-docker"></i> Docker</span>
+                <span class="tech-item"><i class="fab fa-aws"></i> AWS</span>
+                <span class="tech-item"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+                <span class="tech-item"><i class="fab fa-git-alt"></i> Git</span>
+                <span class="tech-item"><i class="fas fa-database"></i> PostgreSQL</span>
+                <span class="tech-item"><i class="fas fa-chart-area"></i> MATLAB</span>
+                <span class="tech-item"><i class="fab fa-java"></i> Java</span>
+                <span class="tech-item"><i class="fab fa-r-project"></i> R</span>
+                <span class="tech-item"><i class="fas fa-circle"></i> Julia</span>
+                <span class="tech-item"><i class="fas fa-code"></i> C++</span>
               </div>
             </div>
           </div>
