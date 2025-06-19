@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development | Dakota Chang</title>
+  <link rel="icon" type="image/x-icon" href="personal_portfolio/img/pfp_profile.ico">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+  <link rel="stylesheet" href="portfolio-style.css">
+</head>
+<body>
+  <!-- Matrix-style background animation -->
+  <canvas id="matrix"></canvas>
+  
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Header -->
+    <header class="main-header">
+      <div class="header-content">
+        <div class="ascii-art">
+          <pre>
+╔═══════════════════════════════════════╗
+║  DAKOTA.CHANG >> webdev.js           ║
+╚═══════════════════════════════════════╝
+          </pre>
+        </div>
+        <nav class="nav-bar">
+          <a href="portfolio.html" class="nav-link">[HOME]</a>
+          <a href="projects.html" class="nav-link">[ML/AI]</a>
+          <a href="webdev.html" class="nav-link active">[WEBDEV]</a>
+          <a href="teaching.html" class="nav-link">[TEACHING]</a>
+          <a href="portfolio.html#contact" class="nav-link">[CONTACT]</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <span class="terminal-button red"></span>
+          <span class="terminal-button yellow"></span>
+          <span class="terminal-button green"></span>
+          <span class="terminal-title">dakota@terminal ~ % ls web_projects/</span>
+        </div>
+        <div class="terminal-content">
+          <h1 class="glitch" data-text="Web Development">Web Development</h1>
+          <p class="tagline">Crafting digital experiences • From concept to code</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Web Projects -->
+    <section class="section">
+      <div class="window">
+        <div class="window-header">
+          <h2><i class="fas fa-briefcase"></i> professional_work.log</h2>
+        </div>
+        <div class="window-content">
+          <div class="projects-grid">
+            <!-- The Coaching Dot -->
+            <div class="project-card">
+              <div class="project-header">
+                <h3>The Coaching Dot</h3>
+                <span class="project-status live">LIVE</span>
+              </div>
+              <p class="project-description">
+                Software Project Manager Intern. Led data science team to analyze Facebook marketing data using Python and ML strategies.
+              </p>
+              <div class="project-impact">
+                <i class="fas fa-chart-line"></i> Marketing Analytics Platform
+              </div>
+              <div class="project-tech">
+                <span class="tech-pill">HTML/CSS/JS</span>
+                <span class="tech-pill">WordPress</span>
+                <span class="tech-pill">Python</span>
+              </div>
+              <a href="http://www.thecoachingdot.com/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> View Live Site
+              </a>
+            </div>
+
+            <!-- The Papillon -->
+            <div class="project-card">
+              <div class="project-header">
+                <h3>The Papillon Youth Outreach</h3>
+                <span class="project-status live">ACTIVE</span>
+              </div>
+              <p class="project-description">
+                Managed web operations for youth outreach magazine, creating interactive online content to engage young readers.
+              </p>
+              <div class="project-impact">
+                <i class="fas fa-users"></i> Youth Engagement Platform
+              </div>
+              <div class="project-tech">
+                <span class="tech-pill">HTML/CSS/JS</span>
+                <span class="tech-pill">WIX</span>
+                <span class="tech-pill">Content Management</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creative Web Projects -->
+    <section class="section">
+      <div class="window">
+        <div class="window-header">
+          <h2><i class="fas fa-palette"></i> creative_projects.git</h2>
+        </div>
+        <div class="window-content">
+          <div class="projects-grid">
+            <!-- Nella Larsen Tribute -->
+            <div class="project-card">
+              <div class="project-header">
+                <h3>A Tribute to Nella Larsen</h3>
+                <span class="project-status">PORTFOLIO</span>
+              </div>
+              <p class="project-description">
+                Designed tribute website featuring biography and interactive timelines for the Harlem Renaissance author.
+              </p>
+              <div class="project-impact">
+                <i class="fas fa-book"></i> Interactive Literary Experience
+              </div>
+              <div class="project-tech">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">Timeline.js</span>
+              </div>
+              <a href="personal_portfolio/nellaLarsen/index.html" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> View Project
+              </a>
+            </div>
+
+            <!-- MaddAddam Puzzle -->
+            <div class="project-card">
+              <div class="project-header">
+                <h3>MaddAddam Puzzle Game</h3>
+                <span class="project-status">GAME</span>
+              </div>
+              <p class="project-description">
+                Web-based puzzle game inspired by Margaret Atwood's dystopian trilogy, featuring glitch effects and immersive audio.
+              </p>
+              <div class="project-impact">
+                <i class="fas fa-puzzle-piece"></i> Interactive Fiction Game
+              </div>
+              <div class="project-tech">
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">Canvas API</span>
+                <span class="tech-pill">Web Audio</span>
+              </div>
+              <a href="personal_portfolio/maddaddam/index.html" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Play Game
+              </a>
+            </div>
+
+            <!-- No Longer Human -->
+            <div class="project-card">
+              <div class="project-header">
+                <h3>No Longer Human Book Review</h3>
+                <span class="project-status">LITERARY</span>
+              </div>
+              <p class="project-description">
+                In-depth exploration of Osamu Dazai's semi-autobiographical masterpiece, featuring analysis and curated content.
+              </p>
+              <div class="project-impact">
+                <i class="fas fa-book-open"></i> Literary Analysis
+              </div>
+              <div class="project-tech">
+                <span class="tech-pill">HTML/CSS</span>
+                <span class="tech-pill">Content Design</span>
+                <span class="tech-pill">Literary Web</span>
+              </div>
+              <a href="personal_portfolio/bookreview.html" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Read Review
+              </a>
+            </div>
+
+            <!-- Data Visualization -->
+            <div class="project-card">
+              <div class="project-header">
+                <h3>Data Visualization Projects</h3>
+                <span class="project-status">SHOWCASE</span>
+              </div>
+              <p class="project-description">
+                Collection of interactive data visualizations including sports analytics and other data-driven stories.
+              </p>
+              <div class="project-impact">
+                <i class="fas fa-chart-bar"></i> Interactive Data Stories
+              </div>
+              <div class="project-tech">
+                <span class="tech-pill">D3.js</span>
+                <span class="tech-pill">Data Analysis</span>
+                <span class="tech-pill">Visual Design</span>
+              </div>
+              <a href="personal_portfolio/dataviz.html" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> View Projects
+              </a>
+            </div>
+
+            <!-- Artist Portfolio -->
+            <div class="project-card">
+              <div class="project-header">
+                <h3>Graphic Design Portfolio</h3>
+                <span class="project-status">SHOWCASE</span>
+              </div>
+              <p class="project-description">
+                Showcase of graphic design projects including movie posters, logos, and digital art created with Adobe Suite.
+              </p>
+              <div class="project-impact">
+                <i class="fas fa-paint-brush"></i> Digital Art Showcase
+              </div>
+              <div class="project-tech">
+                <span class="tech-pill">Adobe Suite</span>
+                <span class="tech-pill">Responsive Design</span>
+                <span class="tech-pill">Gallery Layout</span>
+              </div>
+              <a href="personal_portfolio/artist_portfolio/index.html" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> View Portfolio
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data Visualization Projects -->
+    <section class="section">
+      <div class="window">
+        <div class="window-header">
+          <h2><i class="fas fa-chart-network"></i> data_viz.json</h2>
+        </div>
+        <div class="window-content">
+          <div class="projects-grid">
+            <!-- Headphone Reviews -->
+            <div class="project-card">
+              <div class="project-header">
+                <h3>Headphone Decision Tree</h3>
+                <span class="project-status">TOOL</span>
+              </div>
+              <p class="project-description">
+                Created interactive decision tree and comprehensive reviews for headphone selection, using data visualization.
+              </p>
+              <div class="project-impact">
+                <i class="fas fa-headphones"></i> Audio Tech Guide
+              </div>
+              <div class="project-tech">
+                <span class="tech-pill">DOT/Graphviz</span>
+                <span class="tech-pill">Data Visualization</span>
+                <span class="tech-pill">Interactive Design</span>
+              </div>
+              <a href="personal_portfolio/headfi/index.html" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> View Reviews
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation Helper -->
+    <section class="section nav-helper">
+      <div class="nav-helper-content">
+        <a href="portfolio.html" class="nav-helper-link">
+          <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+        <a href="#" class="nav-helper-link">
+          <i class="fas fa-arrow-up"></i> Back to Top
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="retro-footer">
+      <p>© 2025 Dakota Chang | Pixels, code, and creativity</p>
+    </footer>
+  </div>
+
+  <script src="portfolio-script.js"></script>
+</body>
+</html>

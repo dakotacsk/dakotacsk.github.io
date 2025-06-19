@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dakota Chang | ML Engineer & Entrepreneur</title>
+  <link rel="icon" type="image/x-icon" href="personal_portfolio/img/pfp_profile.ico">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+  <link rel="stylesheet" href="portfolio-style.css">
+</head>
+<body>
+  <!-- Matrix-style background animation -->
+  <canvas id="matrix"></canvas>
+  
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Header -->
+    <header class="main-header">
+      <div class="header-content">
+        <div class="ascii-art">
+          <pre>
+╔═══════════════════════════════════════╗
+║  DAKOTA.CHANG >> ML_ENGINEER.exe     ║
+╚═══════════════════════════════════════╝
+          </pre>
+        </div>
+        <nav class="nav-bar">
+          <a href="portfolio.html" class="nav-link active">[HOME]</a>
+          <a href="projects.html" class="nav-link">[ML/AI]</a>
+          <a href="webdev.html" class="nav-link">[WEBDEV]</a>
+          <a href="teaching.html" class="nav-link">[TEACHING]</a>
+          <a href="#contact" class="nav-link">[CONTACT]</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <span class="terminal-button red"></span>
+          <span class="terminal-button yellow"></span>
+          <span class="terminal-button green"></span>
+          <span class="terminal-title">dakota@terminal ~ % whoami</span>
+        </div>
+        <div class="terminal-content">
+          <div class="typing-animation">
+            <span class="prompt">$</span> <span class="typing-text"></span><span class="cursor">_</span>
+          </div>
+          <div class="hero-info">
+            <h1 class="glitch" data-text="Dakota Chang">Dakota Chang</h1>
+            <p class="tagline">ML Engineer @ Indico • Co-Founder @ Nuggy • Netflix Fellow • DRF</p>
+            <div class="status-bar">
+              <span class="status-item"><i class="fas fa-map-marker-alt"></i> Boston, MA</span>
+              <span class="status-item"><i class="fas fa-graduation-cap"></i> Olin '27</span>
+              <span class="status-item"><i class="fas fa-code"></i> Building AI Solutions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="window">
+        <div class="window-header">
+          <h2><i class="fas fa-user"></i> about.exe</h2>
+        </div>
+        <div class="window-content">
+          <div class="about-grid">
+            <div class="profile-pic-container">
+              <img src="img/avatar_me_plip.jpeg" alt="Dakota Chang" class="profile-pic pixelated">
+              <div class="online-indicator">● ONLINE</div>
+            </div>
+            <div class="about-text">
+              <p class="bio">
+                Hey! I'm Dakota, a machine learning engineer passionate about building AI solutions that drive real-world impact. 
+                Currently juggling multiple exciting roles - developing ML systems at Indico Data, co-founding Nuggy 
+                (AI-powered pricing for cannabis retail), and learning from the best as a Netflix Formation Fellow.
+              </p>
+              <div class="quick-stats">
+                <div class="stat-item">
+                  <span class="stat-label">Current Focus:</span>
+                  <span class="stat-value">ML Systems & Entrepreneurship</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-label">Languages:</span>
+                  <span class="stat-value">English, Chinese (Native), Spanish</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-label">Fun Fact:</span>
+                  <span class="stat-value">Headphone Enthusiast 🎧</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+      <div class="window">
+        <div class="window-header">
+          <h2><i class="fas fa-briefcase"></i> recent_experience.log</h2>
+        </div>
+        <div class="window-content">
+          <div class="timeline">
+            <!-- Nuggy -->
+            <div class="timeline-item active">
+              <div class="timeline-date">May 2025 - Present</div>
+              <div class="timeline-content">
+                <h3>Co-Founder @ <a href="https://nuggy.io" target="_blank" class="company-link">Nuggy</a></h3>
+                <p class="role-description">Building AI-powered dynamic pricing for cannabis dispensaries</p>
+                <ul class="achievements">
+                  <li>Developing ML solutions to optimize retailer margins and profitability</li>
+                  <li>Currently in stealth mode with early pilot partners</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">Startup</span>
+                  <span class="tag">AI/ML</span>
+                  <span class="tag">Cannabis Tech</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Indico Data -->
+            <div class="timeline-item">
+              <div class="timeline-date">May 2025 - Present</div>
+              <div class="timeline-content">
+                <h3>Machine Learning Intern @ Indico Data</h3>
+                <p class="role-description">Optimizing enterprise OCR systems</p>
+                <ul class="achievements">
+                  <li>Reduced OCR inference training costs by <span class="highlight">12%</span> through DSPy benchmarking</li>
+                  <li>Built Streamlit-based "Studio Assistant" for instant prompt quality feedback</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">OCR</span>
+                  <span class="tag">DSPy</span>
+                  <span class="tag">Streamlit</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Netflix -->
+            <div class="timeline-item">
+              <div class="timeline-date">May 2025 - Present</div>
+              <div class="timeline-content">
+                <h3>Formation Fellow @ Netflix</h3>
+                <p class="role-description">Preparing for 2026 internship</p>
+                <ul class="achievements">
+                  <li>Selected as 1 of 40 fellows in competitive program</li>
+                  <li>Learning software engineering best practices and system architecture at scale</li>
+                  <li>Deep diving into distributed systems and microservices</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">System Design</span>
+                  <span class="tag">Distributed Systems</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dorm Room Fund -->
+            <div class="timeline-item">
+              <div class="timeline-date">Summer 2025</div>
+              <div class="timeline-content">
+                <h3>Summer Track @ Dorm Room Fund</h3>
+                <p class="role-description">Exploring venture capital and AI trends</p>
+                <ul class="achievements">
+                  <li>Learning about cutting-edge AI trends and VC fundamentals</li>
+                  <li>Developing investment thesis for AI/ML startups</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">Venture Capital</span>
+                  <span class="tag">AI Investing</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Barn Owls -->
+            <div class="timeline-item">
+              <div class="timeline-date">Dec 2024 - May 2025</div>
+              <div class="timeline-content">
+                <h3>ML & Operations Intern @ Barn Owls Technology</h3>
+                <p class="role-description">Sole ML engineer at ag-tech startup</p>
+                <ul class="achievements">
+                  <li>Trained YOLOv11 model achieving <span class="highlight">90%+ accuracy</span> for pest detection</li>
+                  <li>Deployed to production across <span class="highlight">14 farms</span> with Docker/AWS</li>
+                  <li>Built REST API with PostgreSQL for real-time monitoring</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">Computer Vision</span>
+                  <span class="tag">YOLOv11</span>
+                  <span class="tag">AWS</span>
+                  <span class="tag">Docker</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Olin -->
+            <div class="timeline-item">
+              <div class="timeline-date">Dec 2024 - May 2025</div>
+              <div class="timeline-content">
+                <h3>Machine Learning Researcher @ Olin College of Engineering</h3>
+                <p class="role-description">Engineered and deployed an ensemble ML pipeline that autonomously optimizes HVAC set-points across multi-story commercial facilities</p>
+                <ul class="achievements">
+                  <li>Engineered and deployed an ensemble ML pipeline that autonomously optimizes HVAC set-points across multi-story commercial facilities</li>
+                  <li>Integrated models into a Python microservice stack (PyTorch, scikit-learn, NumPy) and conducted A/B simulations projecting >$6K in annual energy cost savings.</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">Reinforcement Learning</span>
+                  <span class="tag">Variational Auto-Encoder</span>
+                  <span class="tag">Gradient-Boosted Regression</span>
+                  <span class="tag">LSTM</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bootstrap -->
+            <div class="timeline-item">
+              <div class="timeline-date">Jun 2022 - Sep 2022</div>
+              <div class="timeline-content">
+                <h3>Machine Learning Intern @ Bootstrap</h3>
+                <p class="role-description">Developed ML curriculum for K-12 education</p>
+                <ul class="achievements">
+                  <li>Developed machine-learning classes for students aged 12-18 using Pyret coding language</li>
+                  <li>Collaborated with computer science teachers to simplify machine learning algorithms</li>
+                  <li>Created a series of educational materials to complement the classes</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">Pyret</span>
+                  <span class="tag">Machine Learning</span>
+                  <span class="tag">Education Tech</span>
+                  <span class="tag">Curriculum Design</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- The Coaching Dot -->
+            <div class="timeline-item">
+              <div class="timeline-date">Dec 2020 - Mar 2021</div>
+              <div class="timeline-content">
+                <h3>Team Manager @ The Coaching Dot</h3>
+                <p class="role-description">Promoted from unpaid intern to Team Manager</p>
+                <ul class="achievements">
+                  <li>Managed web team as an unpaid intern, leading to promotion as Team Manager</li>
+                  <li>Oversaw data analysis and A.I. team as a paid intern, driving innovation and efficiency</li>
+                  <li>Spearheaded projects to enhance website functionality and optimize data analysis processes</li>
+                </ul>
+                <div class="tech-tags">
+                  <span class="tag">Team Management</span>
+                  <span class="tag">Data Analysis</span>
+                  <span class="tag">Web Development</span>
+                  <span class="tag">AI/ML</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Projects Overview -->
+    <section id="projects" class="section projects-section">
+      <div class="window">
+        <div class="window-header">
+          <h2><i class="fas fa-code-branch"></i> featured_work.git</h2>
+        </div>
+        <div class="window-content">
+          <div class="quick-links">
+            <a href="projects.html" class="category-card">
+              <i class="fas fa-brain"></i>
+              <h3>ML & AI Projects</h3>
+              <p>HVAC optimization, computer vision, NLP research</p>
+              <span class="link-arrow">View All →</span>
+            </a>
+            <a href="webdev.html" class="category-card">
+              <i class="fas fa-code"></i>
+              <h3>Web Development</h3>
+              <p>Interactive sites, data visualization, creative coding</p>
+              <span class="link-arrow">View All →</span>
+            </a>
+            <a href="teaching.html" class="category-card">
+              <i class="fas fa-chalkboard-teacher"></i>
+              <h3>Teaching & Education</h3>
+              <p>Workshops, curriculum development, youth coding</p>
+              <span class="link-arrow">View All →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="window">
+        <div class="window-header">
+          <h2><i class="fas fa-tools"></i> skills.config</h2>
+        </div>
+        <div class="window-content">
+          <div class="skills-container">
+            <div class="skill-category">
+              <h3>Languages & Frameworks</h3>
+              <div class="skill-bars">
+                <div class="skill-item">
+                  <span class="skill-name">Python (PyTorch, TensorFlow, Pandas)</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="95%" style="width: 0%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">Machine Learning & AI</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="90%" style="width: 0%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">SQL & Databases</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="85%" style="width: 0%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">JavaScript/React</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="80%" style="width: 0%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="skill-category">
+              <h3>Tools & Technologies</h3>
+              <div class="tech-grid">
+                <span class="tech-item"><i class="fab fa-docker"></i> Docker</span>
+                <span class="tech-item"><i class="fab fa-aws"></i> AWS</span>
+                <span class="tech-item"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+                <span class="tech-item"><i class="fab fa-git-alt"></i> Git</span>
+                <span class="tech-item"><i class="fas fa-database"></i> PostgreSQL</span>
+                <span class="tech-item"><i class="fas fa-chart-area"></i> MATLAB</span>
+                <span class="tech-item"><i class="fab fa-java"></i> Java</span>
+                <span class="tech-item"><i class="fab fa-r-project"></i> R</span>
+                <span class="tech-item"><i class="fas fa-circle"></i> Julia</span>
+                <span class="tech-item"><i class="fas fa-code"></i> C++</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership" class="section leadership-section">
+      <div class="window">
+        <div class="window-header">
+          <h2><i class="fas fa-star"></i> leadership.init</h2>
+        </div>
+        <div class="window-content">
+          <div class="leadership-grid">
+            <div class="leadership-card">
+              <h3>Andover Alumni Angels</h3>
+              <p class="role">Sourcer</p>
+              <p>Evaluated 30+ startup pitches for $2M angel network</p>
+            </div>
+            <div class="leadership-card">
+              <h3>Public Interest Tech Project Team</h3>
+              <p class="role">President</p>
+              <p>Built 3 company partnerships, led AAAS-published research</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="window">
+        <div class="window-header">
+          <h2><i class="fas fa-envelope"></i> contact.me</h2>
+        </div>
+        <div class="window-content">
+          <div class="contact-grid">
+            <a href="mailto:schang2@olin.edu" class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>schang2@olin.edu</span>
+            </a>
+            <a href="tel:+19783274077" class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>(978) 327-4077</span>
+            </a>
+            <a href="https://github.com/dakotacsk" target="_blank" class="contact-item">
+              <i class="fab fa-github"></i>
+              <span>github.com/dakotacsk</span>
+            </a>
+            <a href="https://www.linkedin.com/in/dakota-chang-0000abcd/" target="_blank" class="contact-item">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://nuggy.io" target="_blank" class="contact-item">
+              <i class="fas fa-leaf"></i>
+              <span>Nuggy.io</span>
+            </a>
+            <a href="index.html" class="contact-item">
+              <i class="fas fa-home"></i>
+              <span>MySpace Page</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="retro-footer">
+      <p>© 2025 Dakota Chang | Built with nostalgia and <span class="heart">♥</span></p>
+      <p class="online-count">Visitors online: <span id="visitor-count">42,069</span></p>
+    </footer>
+  </div>
+
+  <script src="portfolio-script.js"></script>
+</body>
+</html>
