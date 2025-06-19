@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hz Club — Taste You Can Hear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Hz Club</a>
+            <ul class="nav-links">
+                <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="wizard.html" class="nav-link">Wizard</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Taste You Can Hear</h1>
+            <p class="hero-subtitle">Hz Club reviews headphones like Bauhaus designed them and Fellini directed them.</p>
+            <a href="reviews.html" class="btn btn-primary">Start Listening</a>
+        </div>
+        <div class="hero-visual">
+            <img src="img/headphones_frontpage.png" alt="Vintage headphones on brutalist wall" class="hero-image">
+            <div class="vhs-overlay"></div>
+        </div>
+    </section>
+
+    <!-- New Reviews -->
+    <section class="new-reviews">
+        <div class="section-container">
+            <header class="section-header">
+                <h2>New Reviews</h2>
+                <a href="reviews.html" class="section-link">View All →</a>
+            </header>
+            
+            <div class="reviews-grid">
+                <!-- Review Card 1 -->
+                <article class="review-card">
+                    <a href="review-dt770.html" class="review-link">
+                        <div class="review-image">
+                            <img src="img/dt770_80ohms.jpg" alt="Beyerdynamic DT770 Pro">
+                            <div class="review-overlay">
+                                <span class="btn-read">Read Review</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h3>Beyerdynamic DT770 Pro</h3>
+                            <div class="review-meta">
+                                <span class="review-rating">80%</span>
+                                <div class="review-tags">
+                                    <span class="tag">Studio</span>
+                                    <span class="tag">Tank</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Review Card 2 -->
+                <article class="review-card">
+                    <a href="review-airpods-pro.html" class="review-link">
+                        <div class="review-image">
+                            <img src="img/airpods_pro.jpeg" alt="AirPods Pro 2">
+                            <div class="review-overlay">
+                                <span class="btn-read">Read Review</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h3>AirPods Pro 2</h3>
+                            <div class="review-meta">
+                                <span class="review-rating">78.75%</span>
+                                <div class="review-tags">
+                                    <span class="tag">Wireless</span>
+                                    <span class="tag">ANC</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Review Card 3 -->
+                <article class="review-card">
+                    <a href="review-kph30i.html" class="review-link">
+                        <div class="review-image">
+                            <img src="img/kph30i.jpeg" alt="Koss KPH30i">
+                            <div class="review-overlay">
+                                <span class="btn-read">Read Review</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h3>Koss KPH30i</h3>
+                            <div class="review-meta">
+                                <span class="review-rating">78.5%</span>
+                                <div class="review-tags">
+                                    <span class="tag">Budget</span>
+                                    <span class="tag">Cult</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- From the Blog -->
+    <section class="blog-preview">
+        <div class="section-container">
+            <header class="section-header">
+                <h2>From the Blog</h2>
+                <a href="blog.html" class="section-link">All Posts →</a>
+            </header>
+            
+            <article class="blog-card">
+                <div class="blog-content">
+                    <span class="blog-date">Nov 15, 2024</span>
+                    <h3>Why Your Dad's Headphones Sound Better Than Yours</h3>
+                    <p>There's something about vintage cans that modern bluetooth buds can't touch. Maybe it's the weight. Maybe it's the wire. Maybe it's just nostalgia talking...</p>
+                    <a href="blog-post.html" class="blog-link">Continue Reading →</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Wizard Tease -->
+    <section class="wizard-tease">
+        <div class="section-container">
+            <div class="wizard-content">
+                <div class="wizard-visual">
+                    <canvas id="waveform" class="waveform"></canvas>
+                </div>
+                <div class="wizard-text">
+                    <h2>Can't Decide?</h2>
+                    <p>Let our analog-inspired wizard match you with your perfect pair. Answer a few questions about your taste in sound and style.</p>
+                    <a href="wizard.html" class="btn btn-secondary">Launch Wizard</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Hz Club</h4>
+                <p>Brutally honest headphone reviews.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="wizard.html">Wizard</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <p>Questions? <a href="mailto:hello@hzclub.com">hello@hzclub.com</a></p>
+                <p>Press J/K to navigate reviews</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hz Club. Built like a Leica, sounds like a film score.</p>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+/* Blog Post Styles */
+
+.blog-article {
+    padding: var(--space-xl) 0;
+    min-height: calc(100vh - 400px);
+}
+
+.article-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 var(--space-m);
+}
+
+/* Article Header */
+.article-header {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 2px solid var(--text-main);
+}
+
+.article-meta {
+    display: flex;
+    gap: var(--space-m);
+    margin-bottom: var(--space-m);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.article-header h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: var(--space-m);
+}
+
+.article-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-main);
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
+/* Article Content */
+.article-content {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.article-content p {
+    margin-bottom: var(--space-l);
+}
+
+.article-content p.lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: var(--space-xl);
+}
+
+.article-content h2 {
+    font-family: var(--font-header);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-m);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.article-content h3 {
+    font-family: var(--font-header);
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin-top: var(--space-l);
+    margin-bottom: var(--space-m);
+}
+
+.article-content blockquote {
+    margin: var(--space-xl) 0;
+    padding: var(--space-l);
+    background-color: var(--bg-main);
+    border-left: 4px solid var(--accent-red);
+    font-style: italic;
+    font-size: 1.25rem;
+}
+
+.article-content ul,
+.article-content ol {
+    margin-bottom: var(--space-l);
+    padding-left: var(--space-l);
+}
+
+.article-content li {
+    margin-bottom: var(--space-s);
+}
+
+.article-content a {
+    color: var(--accent-red);
+    text-decoration: underline;
+}
+
+.article-content a:hover {
+    color: var(--text-main);
+}
+
+/* Article Footer */
+.article-footer {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-xl);
+    border-top: 2px solid var(--text-main);
+}
+
+.author {
+    font-family: var(--font-header);
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: var(--space-l);
+}
+
+.article-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article-nav-link {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    padding: var(--space-xl) 0;
+    background-color: var(--text-main);
+    color: var(--bg-main);
+}
+
+.newsletter-box {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.newsletter-box h2 {
+    color: var(--bg-main);
+    margin-bottom: var(--space-m);
+}
+
+.newsletter-box p {
+    margin-bottom: var(--space-l);
+    font-size: 1.125rem;
+    color: var(--bg-main);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: var(--space-m);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: var(--space-m);
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    background-color: var(--bg-main);
+    border: 2px solid var(--bg-main);
+    color: var(--text-main);
+    outline: none;
+}
+
+.newsletter-input:focus {
+    border-color: var(--accent-red);
+}
+
+.newsletter-input::placeholder {
+    color: var(--gray-border);
+}
+
+.newsletter-form .btn {
+    background-color: var(--accent-red);
+    color: var(--white);
+    border-color: var(--accent-red);
+    white-space: nowrap;
+}
+
+.newsletter-form .btn:hover {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    border-color: var(--bg-main);
+}
+
+/* Newsletter section uses same styles from blog.css */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .article-container {
+        padding: 0 var(--space-m);
+    }
+    
+    .article-content {
+        font-size: 1rem;
+    }
+    
+    .article-content p.lead {
+        font-size: 1.125rem;
+    }
+    
+    .article-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .article-subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .article-nav {
+        flex-direction: column;
+        gap: var(--space-m);
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form .btn {
+        width: 100%;
+    }
+    
+    .newsletter-box {
+        padding: 0 var(--space-m);
+    }
+}

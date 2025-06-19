@@ -1,0 +1,187 @@
+/* About Page Styles */
+
+.about-hero {
+    padding: var(--space-xl) 0;
+    border-bottom: 2px solid var(--text-main);
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: var(--space-m);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--gray-border);
+}
+
+.about-content {
+    padding: var(--space-xl) 0;
+}
+
+.content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.content-block {
+    background-color: var(--white);
+    border: 2px solid var(--text-main);
+    padding: var(--space-xl);
+}
+
+.content-block h2 {
+    font-size: 2rem;
+    margin-bottom: var(--space-l);
+    text-transform: uppercase;
+}
+
+.content-block h3 {
+    margin-bottom: var(--space-m);
+}
+
+.content-block p {
+    margin-bottom: var(--space-m);
+    line-height: 1.8;
+    max-width: 720px;
+}
+
+.content-block p:last-child {
+    margin-bottom: 0;
+}
+
+/* Philosophy List */
+.philosophy-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-l);
+}
+
+.philosophy-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-l);
+}
+
+.philosophy-number {
+    font-family: var(--font-header);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-red);
+    line-height: 1;
+}
+
+/* Reviewer Block */
+.reviewer-info {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+}
+
+.reviewer-image {
+    width: 200px;
+    height: 200px;
+    border: 2px solid var(--text-main);
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    text-align: center;
+    padding: var(--space-m);
+}
+
+.reviewer-title {
+    font-size: 1rem;
+    color: var(--gray-border);
+    margin-bottom: var(--space-m);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* FAQ Grid */
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-l);
+}
+
+.faq-item h4 {
+    margin-bottom: var(--space-s);
+    font-size: 1.125rem;
+}
+
+.faq-item p {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+/* Contact Block */
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-m);
+    margin-top: var(--space-l);
+}
+
+.contact-link {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-m);
+    border: 2px solid var(--text-main);
+    background-color: var(--bg-main);
+    transition: all 0.2s ease;
+}
+
+.contact-link:hover {
+    background-color: var(--text-main);
+    color: var(--white);
+}
+
+.contact-label {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-xs);
+}
+
+.contact-value {
+    font-family: var(--font-body);
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .reviewer-info {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .reviewer-image {
+        margin: 0 auto;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-methods {
+        grid-template-columns: 1fr;
+    }
+    
+    .philosophy-item {
+        grid-template-columns: 1fr;
+    }
+    
+    .philosophy-number {
+        font-size: 1.5rem;
+    }
+}

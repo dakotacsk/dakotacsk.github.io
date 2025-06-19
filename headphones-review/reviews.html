@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews — Hz Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Hz Club</a>
+            <ul class="nav-links">
+                <li><a href="reviews.html" class="nav-link active">Reviews</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="wizard.html" class="nav-link">Wizard</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="section-container">
+            <h1>All Reviews</h1>
+            <p class="page-subtitle">Like if Bauhaus made Beats.</p>
+        </div>
+    </header>
+
+    <!-- Filters -->
+    <section class="filters-section">
+        <div class="section-container">
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <label>Sort By</label>
+                    <select class="filter-select" id="sortBy">
+                        <option value="newest">Newest First</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Type</label>
+                    <select class="filter-select" id="filterType">
+                        <option value="all">All Types</option>
+                        <option value="over-ear">Over-Ear</option>
+                        <option value="on-ear">On-Ear</option>
+                        <option value="in-ear">In-Ear</option>
+                        <option value="earbuds">Earbuds</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Features</label>
+                    <select class="filter-select" id="filterFeature">
+                        <option value="all">All Features</option>
+                        <option value="wireless">Wireless</option>
+                        <option value="wired">Wired</option>
+                        <option value="anc">Noise Cancelling</option>
+                        <option value="open-back">Open Back</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Grid -->
+    <section class="reviews-section">
+        <div class="section-container">
+            <div class="reviews-grid" id="reviewsGrid">
+                <!-- All headphone reviews -->
+                
+                <!-- Beyerdynamic DT770 Pro -->
+                <article class="review-card" data-type="over-ear" data-features="wired" data-price="150" data-rating="80">
+                    <a href="review-dt770.html" class="review-link">
+                        <div class="review-image">
+                            <img src="img/dt770_80ohms.jpg" alt="Beyerdynamic DT770 Pro">
+                            <div class="review-overlay">
+                                <span class="btn-read">Read Review</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h3>Beyerdynamic DT770 Pro</h3>
+                            <p class="review-subtitle">80 Ohms</p>
+                            <div class="review-meta">
+                                <span class="review-rating">80%</span>
+                                <span class="review-price">$150</span>
+                            </div>
+                            <div class="review-tags">
+                                <span class="tag">Studio</span>
+                                <span class="tag">Tank</span>
+                                <span class="tag">Neutral</span>
+                            </div>
+                            <p class="review-excerpt">Tanky, bassy, treble sizzles like bacon.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- AirPods Pro 2 -->
+                <article class="review-card" data-type="earbuds" data-features="wireless anc" data-price="250" data-rating="78.75">
+                    <a href="review-airpods-pro.html" class="review-link">
+                        <div class="review-image">
+                            <img src="img/airpods_pro.jpeg" alt="AirPods Pro 2">
+                            <div class="review-overlay">
+                                <span class="btn-read">Read Review</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h3>AirPods Pro 2</h3>
+                            <p class="review-subtitle">2nd Generation</p>
+                            <div class="review-meta">
+                                <span class="review-rating">78.75%</span>
+                                <span class="review-price">$250</span>
+                            </div>
+                            <div class="review-tags">
+                                <span class="tag">Wireless</span>
+                                <span class="tag">ANC</span>
+                                <span class="tag">Apple</span>
+                            </div>
+                            <p class="review-excerpt">Everything-ish headphones that disappear from your ears.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Koss KPH30i -->
+                <article class="review-card" data-type="on-ear" data-features="wired open-back" data-price="30" data-rating="78.5">
+                    <a href="review-kph30i.html" class="review-link">
+                        <div class="review-image">
+                            <img src="img/kph30i.jpeg" alt="Koss KPH30i">
+                            <div class="review-overlay">
+                                <span class="btn-read">Read Review</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h3>Koss KPH30i</h3>
+                            <p class="review-subtitle">Clear Edition</p>
+                            <div class="review-meta">
+                                <span class="review-rating">78.5%</span>
+                                <span class="review-price">$30</span>
+                            </div>
+                            <div class="review-tags">
+                                <span class="tag">Budget</span>
+                                <span class="tag">Cult</span>
+                                <span class="tag">Open</span>
+                            </div>
+                            <p class="review-excerpt">Cheap open-back headphone with BASS.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Koss KSC75 -->
+                <article class="review-card" data-type="on-ear" data-features="wired open-back" data-price="20" data-rating="77.75">
+                    <a href="review-ksc75.html" class="review-link">
+                        <div class="review-image">
+                            <img src="img/ksc75.jpg" alt="Koss KSC75">
+                            <div class="review-overlay">
+                                <span class="btn-read">Read Review</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h3>Koss KSC75</h3>
+                            <p class="review-subtitle">Clip-On Classic</p>
+                            <div class="review-meta">
+                                <span class="review-rating">77.75%</span>
+                                <span class="review-price">$20</span>
+                            </div>
+                            <div class="review-tags">
+                                <span class="tag">Budget</span>
+                                <span class="tag">Bright</span>
+                                <span class="tag">Legend</span>
+                            </div>
+                            <p class="review-excerpt">Classics that have no business sounding this good for $20.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Koss Porta Pro -->
+                <article class="review-card" data-type="on-ear" data-features="wired open-back" data-price="39" data-rating="77">
+                    <a href="review-porta-pro.html" class="review-link">
+                        <div class="review-image">
+                            <img src="img/porta_pro.jpg" alt="Koss Porta Pro">
+                            <div class="review-overlay">
+                                <span class="btn-read">Read Review</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h3>Koss Porta Pro</h3>
+                            <p class="review-subtitle">Retro Icon</p>
+                            <div class="review-meta">
+                                <span class="review-rating">77%</span>
+                                <span class="review-price">$39</span>
+                            </div>
+                            <div class="review-tags">
+                                <span class="tag">Retro</span>
+                                <span class="tag">Warm</span>
+                                <span class="tag">Classic</span>
+                            </div>
+                            <p class="review-excerpt">80s styling with timeless sound.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Audio-Technica ATH-M40x -->
+                <article class="review-card" data-type="over-ear" data-features="wired" data-price="99" data-rating="76.25">
+                    <a href="review-m40x.html" class="review-link">
+                        <div class="review-image">
+                            <img src="img/ath_m40x.jpeg" alt="Audio-Technica ATH-M40x">
+                            <div class="review-overlay">
+                                <span class="btn-read">Read Review</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h3>Audio-Technica ATH-M40x</h3>
+                            <p class="review-subtitle">Studio Standard</p>
+                            <div class="review-meta">
+                                <span class="review-rating">76.25%</span>
+                                <span class="review-price">$99</span>
+                            </div>
+                            <div class="review-tags">
+                                <span class="tag">Studio</span>
+                                <span class="tag">Neutral</span>
+                                <span class="tag">Pro</span>
+                            </div>
+                            <p class="review-excerpt">The better M50x that nobody talks about.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Grado SR80x -->
+                <article class="review-card" data-type="over-ear" data-features="wired open-back" data-price="125" data-rating="72.5">
+                    <a href="review-sr80x.html" class="review-link">
+                        <div class="review-image">
+                            <img src="img/grado_sr80x.jpg" alt="Grado SR80x">
+                            <div class="review-overlay">
+                                <span class="btn-read">Read Review</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h3>Grado SR80x</h3>
+                            <p class="review-subtitle">Brooklyn Made</p>
+                            <div class="review-meta">
+                                <span class="review-rating">72.5%</span>
+                                <span class="review-price">$125</span>
+                            </div>
+                            <div class="review-tags">
+                                <span class="tag">Open</span>
+                                <span class="tag">Bright</span>
+                                <span class="tag">Rock</span>
+                            </div>
+                            <p class="review-excerpt">Rock and roll in headphone form.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Bose SoundSport Free -->
+                <article class="review-card" data-type="earbuds" data-features="wireless" data-price="200" data-rating="71.75">
+                    <a href="review-soundsport.html" class="review-link">
+                        <div class="review-image">
+                            <img src="img/bose_soundsport_free.png" alt="Bose SoundSport Free">
+                            <div class="review-overlay">
+                                <span class="btn-read">Read Review</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h3>Bose SoundSport Free</h3>
+                            <p class="review-subtitle">Wireless Sports</p>
+                            <div class="review-meta">
+                                <span class="review-rating">71.75%</span>
+                                <span class="review-price">$200</span>
+                            </div>
+                            <div class="review-tags">
+                                <span class="tag">Sports</span>
+                                <span class="tag">V-Shape</span>
+                                <span class="tag">Bose</span>
+                            </div>
+                            <p class="review-excerpt">Bose gonna Bose.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- AirPods 2 -->
+                <article class="review-card" data-type="earbuds" data-features="wireless" data-price="160" data-rating="67.75">
+                    <a href="review-airpods2.html" class="review-link">
+                        <div class="review-image">
+                            <img src="img/airpods2.jpeg" alt="AirPods 2">
+                            <div class="review-overlay">
+                                <span class="btn-read">Read Review</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h3>AirPods 2</h3>
+                            <p class="review-subtitle">The Original</p>
+                            <div class="review-meta">
+                                <span class="review-rating">67.75%</span>
+                                <span class="review-price">$160</span>
+                            </div>
+                            <div class="review-tags">
+                                <span class="tag">Wireless</span>
+                                <span class="tag">Apple</span>
+                                <span class="tag">Meh</span>
+                            </div>
+                            <p class="review-excerpt">I hate the way they fit and they just don't sound that amazing tbh.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Beats Studio 3 -->
+                <article class="review-card" data-type="over-ear" data-features="wireless anc" data-price="200" data-rating="64.5">
+                    <a href="review-beats.html" class="review-link">
+                        <div class="review-image">
+                            <img src="img/beats_studio3.jpg" alt="Beats Studio 3">
+                            <div class="review-overlay">
+                                <span class="btn-read">Read Review</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h3>Beats Studio 3</h3>
+                            <p class="review-subtitle">Fashion First</p>
+                            <div class="review-meta">
+                                <span class="review-rating">64.5%</span>
+                                <span class="review-price">$200</span>
+                            </div>
+                            <div class="review-tags">
+                                <span class="tag">Bass</span>
+                                <span class="tag">Fashion</span>
+                                <span class="tag">Logo</span>
+                            </div>
+                            <p class="review-excerpt">Mudpuddles and fashion statements.</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Hz Club</h4>
+                <p>Brutally honest headphone reviews.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="wizard.html">Wizard</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <p>Questions? <a href="mailto:hello@hzclub.com">hello@hzclub.com</a></p>
+                <p>Press J/K to navigate reviews</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hz Club. Built like a Leica, sounds like a film score.</p>
+        </div>
+    </footer>
+
+    <script src="reviews.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Hz Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Hz Club</a>
+            <ul class="nav-links">
+                <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="wizard.html" class="nav-link">Wizard</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="section-container">
+            <h1>Blog</h1>
+            <p class="page-subtitle">Thoughts on sound, design, and the space between your ears.</p>
+        </div>
+    </header>
+
+    <!-- Blog Posts -->
+    <section class="blog-section">
+        <div class="section-container">
+            <div class="blog-grid">
+                
+                <!-- Featured Post -->
+                <article class="blog-post featured">
+                    <div class="post-image">
+                        <img src="img/headphone_wall.JPG" alt="Wall of vintage headphones">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date">Nov 15, 2024</span>
+                            <span class="post-category">Essay</span>
+                        </div>
+                        <h2><a href="blog-post-planar.html" class="post-title">Why Your Dad's Headphones Sound Better Than Yours</a></h2>
+                        <p class="post-excerpt">There's something about vintage cans that modern bluetooth buds can't touch. Maybe it's the weight. Maybe it's the wire. Maybe it's just nostalgia talking. But when I plug in a pair of 1970s Koss Pro4AAs, something magical happens...</p>
+                        <a href="blog-post-planar.html" class="post-link">Continue Reading →</a>
+                    </div>
+                </article>
+
+                <!-- Regular Posts -->
+                <article class="blog-post">
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date">Nov 10, 2024</span>
+                            <span class="post-category">Guide</span>
+                        </div>
+                        <h3><a href="#" class="post-title">The Beginner's Guide to Impedance (It's Not That Scary)</a></h3>
+                        <p class="post-excerpt">Everyone talks about impedance like it's quantum physics. It's not. Here's what you actually need to know in 5 minutes.</p>
+                        <a href="#" class="post-link">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-post">
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date">Nov 5, 2024</span>
+                            <span class="post-category">Opinion</span>
+                        </div>
+                        <h3><a href="#" class="post-title">In Defense of Beats (Hear Me Out)</a></h3>
+                        <p class="post-excerpt">Yes, they're overpriced. Yes, they're bass-heavy. But Beats did something important for headphone culture that we shouldn't ignore.</p>
+                        <a href="#" class="post-link">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-post">
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date">Oct 28, 2024</span>
+                            <span class="post-category">Technical</span>
+                        </div>
+                        <h3><a href="#" class="post-title">Open-Back vs Closed-Back: A Visual Guide</a></h3>
+                        <p class="post-excerpt">With hand-drawn diagrams and zero frequency graphs. Because sometimes a picture really is worth a thousand Hz.</p>
+                        <a href="#" class="post-link">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-post">
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date">Oct 20, 2024</span>
+                            <span class="post-category">Culture</span>
+                        </div>
+                        <h3><a href="#" class="post-title">How Movies Lie About Headphones</a></h3>
+                        <p class="post-excerpt">Every hacker wears giant cans. Every jogger has AirPods. Every DJ uses Beats. Hollywood's headphone problem, explained.</p>
+                        <a href="#" class="post-link">Read More →</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="pagination-link disabled">← Previous</a>
+                <span class="pagination-current">Page 1 of 3</span>
+                <a href="blog-page-2.html" class="pagination-link">Next →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="section-container">
+            <div class="newsletter-box">
+                <h2>Stay Tuned</h2>
+                <p>Get weekly posts about audio gear, culture, and the occasional rant. No spam, just vibes.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="your@email.com" class="newsletter-input" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Hz Club</h4>
+                <p>Brutally honest headphone reviews.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="wizard.html">Wizard</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <p>Questions? <a href="mailto:hello@hzclub.com">hello@hzclub.com</a></p>
+                <p>Press J/K to navigate reviews</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hz Club. Built like a Leica, sounds like a film score.</p>
+        </div>
+    </footer>
+</body>
+</html>

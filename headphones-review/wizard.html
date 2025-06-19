@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizard — Hz Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="wizard.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Hz Club</a>
+            <ul class="nav-links">
+                <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="wizard.html" class="nav-link active">Wizard</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Wizard Container -->
+    <section class="wizard-container">
+        <div class="wizard-header">
+            <h1>Headphone Wizard</h1>
+            <p>Answer a few questions. Get matched with your perfect pair.</p>
+        </div>
+
+        <div class="wizard-panel">
+            <!-- Budget (First Question) -->
+            <div class="control-group">
+                <label class="control-label">Budget</label>
+                <p class="control-hint">How much are you willing to spend?</p>
+                <div class="budget-container">
+                    <div class="budget-track">
+                        <div class="budget-fill" id="budgetFill"></div>
+                        <input type="range" id="budgetSlider" min="0" max="1000" value="0" step="50" class="budget-input">
+                    </div>
+                    <div class="budget-labels">
+                        <span>Any</span>
+                        <span>$200</span>
+                        <span>$400</span>
+                        <span>$600</span>
+                        <span>$800</span>
+                        <span>$1000</span>
+                    </div>
+                    <div class="budget-display">
+                        <span id="budgetValue">Any Budget</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fit Type -->
+            <div class="control-group">
+                <label class="control-label">Fit Type</label>
+                <p class="control-hint">What kind of fit do you prefer?</p>
+                <div class="toggle-group">
+                    <input type="radio" name="fitType" id="fit-none" value="none" checked>
+                    <label for="fit-none" class="toggle-label">No Preference</label>
+                    
+                    <input type="radio" name="fitType" id="fit-over" value="over-ear">
+                    <label for="fit-over" class="toggle-label">Over-Ear</label>
+                    
+                    <input type="radio" name="fitType" id="fit-iem" value="iem">
+                    <label for="fit-iem" class="toggle-label">In-Ear (IEM)</label>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="control-group">
+                <label class="control-label">Features</label>
+                <p class="control-hint">Select any features you need</p>
+                <div class="feature-checkboxes">
+                    <div class="feature-item">
+                        <input type="checkbox" id="feat-bluetooth" name="features" value="bluetooth">
+                        <label for="feat-bluetooth">Bluetooth/Wireless</label>
+                    </div>
+                    <div class="feature-item">
+                        <input type="checkbox" id="feat-anc" name="features" value="anc">
+                        <label for="feat-anc">Noise Cancelling</label>
+                    </div>
+                    <div class="feature-item">
+                        <input type="checkbox" id="feat-gaming" name="features" value="gaming">
+                        <label for="feat-gaming">Gaming Features</label>
+                    </div>
+                    <div class="feature-item">
+                        <input type="checkbox" id="feat-sports" name="features" value="sports">
+                        <label for="feat-sports">Sports/Exercise</label>
+                    </div>
+                    <div class="feature-item">
+                        <input type="checkbox" id="feat-apple" name="features" value="apple">
+                        <label for="feat-apple">Apple Ecosystem</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sound Preference -->
+            <div class="control-group">
+                <label class="control-label">Sound Preference</label>
+                <p class="control-hint">Drag the slider to select your sound signature</p>
+                <div class="sound-slider-container">
+                    <div class="sound-track">
+                        <input type="range" id="soundSlider" min="0" max="4" value="0" step="1" class="sound-input">
+                        <div class="sound-ticks">
+                            <span class="tick"></span>
+                            <span class="tick"></span>
+                            <span class="tick"></span>
+                            <span class="tick"></span>
+                            <span class="tick"></span>
+                        </div>
+                    </div>
+                    <div class="sound-labels">
+                        <span>None</span>
+                        <span>Mellow</span>
+                        <span>Neutral</span>
+                        <span>Sparkly</span>
+                        <span>Punchy</span>
+                    </div>
+                    <div class="sound-display">
+                        <span id="soundValue">No Preference</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Aesthetic Importance -->
+            <div class="control-group">
+                <label class="control-label">Aesthetic Importance</label>
+                <div class="toggle-group">
+                    <input type="radio" name="aesthetic" id="aes-none" value="none" checked>
+                    <label for="aes-none" class="toggle-label">Don't Care</label>
+                    
+                    <input type="radio" name="aesthetic" id="aes-low" value="low">
+                    <label for="aes-low" class="toggle-label">Low</label>
+                    
+                    <input type="radio" name="aesthetic" id="aes-mid" value="mid">
+                    <label for="aes-mid" class="toggle-label">Mid</label>
+                    
+                    <input type="radio" name="aesthetic" id="aes-high" value="high">
+                    <label for="aes-high" class="toggle-label">I want to feel cool</label>
+                </div>
+            </div>
+
+            <!-- Listening Style -->
+            <div class="control-group">
+                <label class="control-label">Listening Style</label>
+                <p class="control-hint">Skip this if you don't care about listening style</p>
+                <div class="style-slider">
+                    <input type="range" id="styleSlider" min="0" max="100" value="50" class="style-input">
+                    <div class="style-labels">
+                        <div class="style-label left">
+                            <span class="style-name">Wong Kar-wai</span>
+                            <span class="style-desc">Warm and Atmospheric</span>
+                        </div>
+                        <div class="style-label right">
+                            <span class="style-name">Christopher Nolan</span>
+                            <span class="style-desc">Cold and Precise</span>
+                        </div>
+                    </div>
+                    <div class="style-indicator">
+                        <span id="styleValue">Balanced</span>
+                    </div>
+                </div>
+                <div class="style-skip">
+                    <input type="checkbox" id="styleSkip" name="styleSkip">
+                    <label for="styleSkip">Skip this preference</label>
+                </div>
+            </div>
+
+            <!-- Sound EQ Curve -->
+            <div class="control-group">
+                <label class="control-label">Sound EQ Preference</label>
+                <p class="control-hint">Adjust the curve to match your preferred sound</p>
+                <div class="eq-visualizer" id="eqVisualizer">
+                    <canvas id="eqCanvas" width="600" height="200"></canvas>
+                    <div class="eq-controls">
+                        <div class="eq-slider-group">
+                            <input type="range" id="bassSlider" min="-10" max="10" value="0" class="eq-slider">
+                            <label>Bass</label>
+                        </div>
+                        <div class="eq-slider-group">
+                            <input type="range" id="midsSlider" min="-10" max="10" value="0" class="eq-slider">
+                            <label>Mids</label>
+                        </div>
+                        <div class="eq-slider-group">
+                            <input type="range" id="highsSlider" min="-10" max="10" value="0" class="eq-slider">
+                            <label>Highs</label>
+                        </div>
+                    </div>
+                    <div class="eq-presets">
+                        <button class="eq-preset" data-preset="flat">Flat</button>
+                        <button class="eq-preset" data-preset="v-shaped">V-Shaped</button>
+                        <button class="eq-preset" data-preset="warm">Warm</button>
+                        <button class="eq-preset" data-preset="bright">Bright</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Match Button -->
+            <button class="btn btn-primary match-button" id="matchButton">Find My Match</button>
+        </div>
+
+        <!-- Results -->
+        <div class="wizard-results" id="wizardResults" style="display: none;">
+            <h2>Your Matches</h2>
+            <div class="match-grid" id="matchGrid">
+                <!-- Matches will be inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Hz Club</h4>
+                <p>Brutally honest headphone reviews.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="wizard.html">Wizard</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <p>Questions? <a href="mailto:hello@hzclub.com">hello@hzclub.com</a></p>
+                <p>Press J/K to navigate reviews</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hz Club. Built like a Leica, sounds like a film score.</p>
+        </div>
+    </footer>
+
+    <script src="wizard.js"></script>
+</body>
+</html>

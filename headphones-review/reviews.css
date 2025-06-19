@@ -1,0 +1,137 @@
+/* Reviews Page Specific Styles */
+
+/* Page Header */
+.page-header {
+    padding: var(--space-xl) 0 var(--space-l);
+    border-bottom: 2px solid var(--text-main);
+}
+
+.page-header h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: var(--space-s);
+}
+
+.page-subtitle {
+    font-size: 1.25rem;
+    color: var(--gray-border);
+}
+
+/* Active Nav State */
+.nav-link.active {
+    color: var(--accent-red);
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Filters Section */
+.filters-section {
+    padding: var(--space-l) 0;
+    border-bottom: 2px solid var(--text-main);
+    background-color: var(--white);
+}
+
+.filters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-l);
+}
+
+.filter-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-s);
+}
+
+.filter-select {
+    width: 100%;
+    padding: var(--space-s) var(--space-m);
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    background-color: var(--bg-main);
+    border: 2px solid var(--text-main);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-select:hover {
+    background-color: var(--white);
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--accent-red);
+}
+
+/* Reviews Section */
+.reviews-section {
+    padding: var(--space-xl) 0;
+}
+
+/* Extended Review Card Styles */
+.review-card .review-subtitle {
+    font-size: 0.875rem;
+    color: var(--gray-border);
+    margin-bottom: var(--space-s);
+}
+
+.review-card .review-meta {
+    margin-bottom: var(--space-s);
+}
+
+.review-card .review-price {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.review-excerpt {
+    margin-top: var(--space-s);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--text-main);
+    opacity: 0.8;
+}
+
+/* Keyboard Navigation Highlight */
+.review-card.keyboard-focus {
+    outline: 3px solid var(--accent-red);
+    outline-offset: -3px;
+}
+
+/* Loading State */
+.loading {
+    text-align: center;
+    padding: var(--space-xl);
+    font-size: 1.125rem;
+}
+
+/* No Results */
+.no-results {
+    text-align: center;
+    padding: var(--space-xl);
+}
+
+.no-results h3 {
+    margin-bottom: var(--space-m);
+}
+
+.no-results p {
+    color: var(--gray-border);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filters-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-m);
+    }
+    
+    .review-excerpt {
+        display: none;
+    }
+}
