@@ -1,95 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Reviews — Hz Club</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="reviews.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Hz Club</a>
-            <ul class="nav-links">
-                <li><a href="reviews.html" class="nav-link active">Reviews</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="wizard.html" class="nav-link">Wizard</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Page Header -->
-    <header class="page-header">
-        <div class="section-container">
-            <h1>All Reviews</h1>
-            <p class="page-subtitle">Brutally honest takes on 40 headphones. No sugar coating.</p>
-        </div>
-    </header>
-
-    <!-- Filter Bar -->
-    <section class="filter-bar">
-        <div class="section-container">
-            <div class="filter-controls">
-                <div class="filter-group">
-                    <label>Type</label>
-                    <select id="filterType">
-                        <option value="">All Types</option>
-                        <option value="over-ear">Over-Ear</option>
-                        <option value="iem">IEM/Earbuds</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Features</label>
-                    <select id="filterFeatures">
-                        <option value="">All Features</option>
-                        <option value="wireless">Wireless</option>
-                        <option value="anc">Noise Cancelling</option>
-                        <option value="wired">Wired Only</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Price</label>
-                    <select id="filterPrice">
-                        <option value="">All Prices</option>
-                        <option value="0-50">Under $50</option>
-                        <option value="50-150">$50 - $150</option>
-                        <option value="150-300">$150 - $300</option>
-                        <option value="300-99999">$300+</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Sort By</label>
-                    <select id="sortBy">
-                        <option value="rating-desc">Highest Rated</option>
-                        <option value="rating-asc">Lowest Rated</option>
-                        <option value="price-asc">Price: Low to High</option>
-                        <option value="price-desc">Price: High to Low</option>
-                        <option value="name-asc">Name: A-Z</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews Grid -->
-    <section class="reviews-section">
-        <div class="section-container">
-            <div class="reviews-grid" id="reviewsGrid">
 
                 <!-- Koss Porta Pro -->
                 <article class="review-card" data-type="over-ear" data-features="" data-price="39" data-rating="81">
-                    <a href="review/review-koss-porta-pro.html" class="review-link">
+                    <a href="review-koss-porta-pro.html" class="review-link">
                         <div class="review-image">
                             <img src="img/porta_pro.jpg" alt="Koss Porta Pro">
                             <div class="review-overlay">
@@ -115,7 +27,7 @@
 
                 <!-- Koss KSC75 -->
                 <article class="review-card" data-type="over-ear" data-features="" data-price="20" data-rating="75">
-                    <a href="review/review-koss-ksc75.html" class="review-link">
+                    <a href="review-koss-ksc75.html" class="review-link">
                         <div class="review-image">
                             <img src="img/koss_ksc75.jpg" alt="Koss KSC75">
                             <div class="review-overlay">
@@ -141,7 +53,7 @@
 
                 <!-- Koss KPH30i -->
                 <article class="review-card" data-type="over-ear" data-features="" data-price="30" data-rating="82">
-                    <a href="review/review-koss-kph30i.html" class="review-link">
+                    <a href="review-koss-kph30i.html" class="review-link">
                         <div class="review-image">
                             <img src="img/kph30i.jpeg" alt="Koss KPH30i">
                             <div class="review-overlay">
@@ -167,7 +79,7 @@
 
                 <!-- Samson SR850 -->
                 <article class="review-card" data-type="over-ear" data-features="" data-price="35" data-rating="81">
-                    <a href="review/review-samson-sr850.html" class="review-link">
+                    <a href="review-samson-sr850.html" class="review-link">
                         <div class="review-image">
                             <img src="img/samson_sr850.jpg" alt="Samson SR850">
                             <div class="review-overlay">
@@ -193,7 +105,7 @@
 
                 <!-- KZ ZSN Pro -->
                 <article class="review-card" data-type="iem" data-features="" data-price="24" data-rating="74">
-                    <a href="review/review-kz-zsn-pro.html" class="review-link">
+                    <a href="review-kz-zsn-pro.html" class="review-link">
                         <div class="review-image">
                             <img src="img/kz_zsnpro.jpg" alt="KZ ZSN Pro">
                             <div class="review-overlay">
@@ -219,7 +131,7 @@
 
                 <!-- KZ ZS10 -->
                 <article class="review-card" data-type="iem" data-features="" data-price="40" data-rating="84">
-                    <a href="review/review-kz-zs10.html" class="review-link">
+                    <a href="review-kz-zs10.html" class="review-link">
                         <div class="review-image">
                             <img src="img/kz_zs10.jpg" alt="KZ ZS10">
                             <div class="review-overlay">
@@ -245,7 +157,7 @@
 
                 <!-- Moondrop Crescent -->
                 <article class="review-card" data-type="iem" data-features="" data-price="30" data-rating="78">
-                    <a href="review/review-moondrop-crescent.html" class="review-link">
+                    <a href="review-moondrop-crescent.html" class="review-link">
                         <div class="review-image">
                             <img src="img/moondrop_crescent.webp" alt="Moondrop Crescent">
                             <div class="review-overlay">
@@ -271,7 +183,7 @@
 
                 <!-- Moondrop Chu -->
                 <article class="review-card" data-type="iem" data-features="" data-price="20" data-rating="85">
-                    <a href="review/review-moondrop-chu.html" class="review-link">
+                    <a href="review-moondrop-chu.html" class="review-link">
                         <div class="review-image">
                             <img src="img/moondrop_chu.jpeg" alt="Moondrop Chu">
                             <div class="review-overlay">
@@ -297,7 +209,7 @@
 
                 <!-- Tin HiFi T2 Plus -->
                 <article class="review-card" data-type="iem" data-features="" data-price="50" data-rating="77">
-                    <a href="review/review-tin-hifi-t2-plus.html" class="review-link">
+                    <a href="review-tin-hifi-t2-plus.html" class="review-link">
                         <div class="review-image">
                             <img src="img/tin_hifi_t2_plus.jpg" alt="Tin HiFi T2 Plus">
                             <div class="review-overlay">
@@ -323,7 +235,7 @@
 
                 <!-- Shure SRH440 -->
                 <article class="review-card" data-type="over-ear" data-features="" data-price="80" data-rating="72">
-                    <a href="review/review-shure-srh440.html" class="review-link">
+                    <a href="review-shure-srh440.html" class="review-link">
                         <div class="review-image">
                             <img src="img/shure_srh440.jpeg" alt="Shure SRH440">
                             <div class="review-overlay">
@@ -349,7 +261,7 @@
 
                 <!-- Tin HiFi T3 Plus -->
                 <article class="review-card" data-type="iem" data-features="" data-price="70" data-rating="75">
-                    <a href="review/review-tin-hifi-t3-plus.html" class="review-link">
+                    <a href="review-tin-hifi-t3-plus.html" class="review-link">
                         <div class="review-image">
                             <img src="img/tin_hifi_t3_plus.jpeg" alt="Tin HiFi T3 Plus">
                             <div class="review-overlay">
@@ -375,7 +287,7 @@
 
                 <!-- Moondrop Aria -->
                 <article class="review-card" data-type="iem" data-features="" data-price="80" data-rating="84">
-                    <a href="review/review-moondrop-aria.html" class="review-link">
+                    <a href="review-moondrop-aria.html" class="review-link">
                         <div class="review-image">
                             <img src="img/moondrop_aria.webp" alt="Moondrop Aria">
                             <div class="review-overlay">
@@ -401,7 +313,7 @@
 
                 <!-- Lypertek PurePlay Z3 2.0 -->
                 <article class="review-card" data-type="iem" data-features="wireless" data-price="100" data-rating="75">
-                    <a href="review/review-lypertek-pureplay-z3-2-0.html" class="review-link">
+                    <a href="review-lypertek-pureplay-z3-2-0.html" class="review-link">
                         <div class="review-image">
                             <img src="img/lypertek_pureplay.jpg" alt="Lypertek PurePlay Z3 2.0">
                             <div class="review-overlay">
@@ -427,7 +339,7 @@
 
                 <!-- Grado SR80x -->
                 <article class="review-card" data-type="over-ear" data-features="" data-price="125" data-rating="88">
-                    <a href="review/review-grado-sr80x.html" class="review-link">
+                    <a href="review-grado-sr80x.html" class="review-link">
                         <div class="review-image">
                             <img src="img/grado_sr80x.jpg" alt="Grado SR80x">
                             <div class="review-overlay">
@@ -453,7 +365,7 @@
 
                 <!-- Beyerdynamic DT990 Pro -->
                 <article class="review-card" data-type="over-ear" data-features="amp-required" data-price="130" data-rating="80">
-                    <a href="review/review-beyerdynamic-dt990-pro.html" class="review-link">
+                    <a href="review-beyerdynamic-dt990-pro.html" class="review-link">
                         <div class="review-image">
                             <img src="img/beyerdynamic_dt990_pro_250.webp" alt="Beyerdynamic DT990 Pro">
                             <div class="review-overlay">
@@ -479,7 +391,7 @@
 
                 <!-- Beyerdynamic DT770 Pro -->
                 <article class="review-card" data-type="over-ear" data-features="amp-required" data-price="150" data-rating="76">
-                    <a href="review/review-beyerdynamic-dt770-pro.html" class="review-link">
+                    <a href="review-beyerdynamic-dt770-pro.html" class="review-link">
                         <div class="review-image">
                             <img src="img/dt770_80ohms.jpg" alt="Beyerdynamic DT770 Pro">
                             <div class="review-overlay">
@@ -505,7 +417,7 @@
 
                 <!-- Drop x Sennheiser PC38X -->
                 <article class="review-card" data-type="over-ear" data-features="gaming" data-price="170" data-rating="79">
-                    <a href="review/review-drop-x-sennheiser-pc38x.html" class="review-link">
+                    <a href="review-drop-x-sennheiser-pc38x.html" class="review-link">
                         <div class="review-image">
                             <img src="img/senn_pc38x.jpeg" alt="Drop x Sennheiser PC38X">
                             <div class="review-overlay">
@@ -531,7 +443,7 @@
 
                 <!-- Audio-Technica ATH-M40x -->
                 <article class="review-card" data-type="over-ear" data-features="wireless gaming" data-price="180" data-rating="77">
-                    <a href="review/review-audio-technica-ath-m40x.html" class="review-link">
+                    <a href="review-audio-technica-ath-m40x.html" class="review-link">
                         <div class="review-image">
                             <img src="img/ath_m40x.jpeg" alt="Audio-Technica ATH-M40x">
                             <div class="review-overlay">
@@ -557,7 +469,7 @@
 
                 <!-- Hifiman Deva -->
                 <article class="review-card" data-type="over-ear" data-features="" data-price="200" data-rating="79">
-                    <a href="review/review-hifiman-deva.html" class="review-link">
+                    <a href="review-hifiman-deva.html" class="review-link">
                         <div class="review-image">
                             <img src="img/hifiman_deva.jpg" alt="Hifiman Deva">
                             <div class="review-overlay">
@@ -583,7 +495,7 @@
 
                 <!-- Monolith M1060C -->
                 <article class="review-card" data-type="over-ear" data-features="" data-price="250" data-rating="81">
-                    <a href="review/review-monolith-m1060c.html" class="review-link">
+                    <a href="review-monolith-m1060c.html" class="review-link">
                         <div class="review-image">
                             <img src="img/monolith_m1060C.jpg" alt="Monolith M1060C">
                             <div class="review-overlay">
@@ -609,7 +521,7 @@
 
                 <!-- Microsoft Surface Headphones 2 -->
                 <article class="review-card" data-type="over-ear" data-features="wireless" data-price="250" data-rating="80">
-                    <a href="review/review-microsoft-surface-headphones-2.html" class="review-link">
+                    <a href="review-microsoft-surface-headphones-2.html" class="review-link">
                         <div class="review-image">
                             <img src="img/surface_headphones_2.webp" alt="Microsoft Surface Headphones 2">
                             <div class="review-overlay">
@@ -635,7 +547,7 @@
 
                 <!-- AirPods 2 -->
                 <article class="review-card" data-type="iem" data-features="wireless" data-price="160" data-rating="70">
-                    <a href="review/review-airpods-2.html" class="review-link">
+                    <a href="review-airpods-2.html" class="review-link">
                         <div class="review-image">
                             <img src="img/airpods2.jpeg" alt="AirPods 2">
                             <div class="review-overlay">
@@ -661,7 +573,7 @@
 
                 <!-- Etymotic ER3SE -->
                 <article class="review-card" data-type="iem" data-features="" data-price="179" data-rating="82">
-                    <a href="review/review-etymotic-er3se.html" class="review-link">
+                    <a href="review-etymotic-er3se.html" class="review-link">
                         <div class="review-image">
                             <img src="img/etymotic_er3se.jpg" alt="Etymotic ER3SE">
                             <div class="review-overlay">
@@ -687,7 +599,7 @@
 
                 <!-- Etymotic ER3XR -->
                 <article class="review-card" data-type="iem" data-features="" data-price="179" data-rating="79">
-                    <a href="review/review-etymotic-er3xr.html" class="review-link">
+                    <a href="review-etymotic-er3xr.html" class="review-link">
                         <div class="review-image">
                             <img src="img/etymotic_er3xr.jpg" alt="Etymotic ER3XR">
                             <div class="review-overlay">
@@ -713,7 +625,7 @@
 
                 <!-- Bose SoundSport Free -->
                 <article class="review-card" data-type="iem" data-features="wireless sports" data-price="200" data-rating="87">
-                    <a href="review/review-bose-soundsport-free.html" class="review-link">
+                    <a href="review-bose-soundsport-free.html" class="review-link">
                         <div class="review-image">
                             <img src="img/bose_soundsport_free.png" alt="Bose SoundSport Free">
                             <div class="review-overlay">
@@ -739,7 +651,7 @@
 
                 <!-- 7HZ Timeless -->
                 <article class="review-card" data-type="iem" data-features="" data-price="220" data-rating="86">
-                    <a href="review/review-7hz-timeless.html" class="review-link">
+                    <a href="review-7hz-timeless.html" class="review-link">
                         <div class="review-image">
                             <img src="img/7hz_timeless.jpeg" alt="7HZ Timeless">
                             <div class="review-overlay">
@@ -765,7 +677,7 @@
 
                 <!-- AirPods Pro 2 -->
                 <article class="review-card" data-type="iem" data-features="wireless anc" data-price="250" data-rating="80">
-                    <a href="review/review-airpods-pro-2.html" class="review-link">
+                    <a href="review-airpods-pro-2.html" class="review-link">
                         <div class="review-image">
                             <img src="img/airpods_pro.jpeg" alt="AirPods Pro 2">
                             <div class="review-overlay">
@@ -791,7 +703,7 @@
 
                 <!-- Grado GW100x -->
                 <article class="review-card" data-type="over-ear" data-features="wireless" data-price="275" data-rating="74">
-                    <a href="review/review-grado-gw100x.html" class="review-link">
+                    <a href="review-grado-gw100x.html" class="review-link">
                         <div class="review-image">
                             <img src="img/grado_gw100x.jpeg" alt="Grado GW100x">
                             <div class="review-overlay">
@@ -817,7 +729,7 @@
 
                 <!-- Bose QC35 II -->
                 <article class="review-card" data-type="over-ear" data-features="wireless anc" data-price="300" data-rating="80">
-                    <a href="review/review-bose-qc35-ii.html" class="review-link">
+                    <a href="review-bose-qc35-ii.html" class="review-link">
                         <div class="review-image">
                             <img src="img/bose_qc35ii.webp" alt="Bose QC35 II">
                             <div class="review-overlay">
@@ -843,7 +755,7 @@
 
                 <!-- Bose 700 -->
                 <article class="review-card" data-type="over-ear" data-features="wireless anc" data-price="380" data-rating="81">
-                    <a href="review/review-bose-700.html" class="review-link">
+                    <a href="review-bose-700.html" class="review-link">
                         <div class="review-image">
                             <img src="img/bose_qc700.jpeg" alt="Bose 700">
                             <div class="review-overlay">
@@ -869,7 +781,7 @@
 
                 <!-- Sony WH-1000XM5 -->
                 <article class="review-card" data-type="over-ear" data-features="wireless anc" data-price="350" data-rating="79">
-                    <a href="review/review-sony-wh-1000xm5.html" class="review-link">
+                    <a href="review-sony-wh-1000xm5.html" class="review-link">
                         <div class="review-image">
                             <img src="img/Sony-WH-1000XM5.webp" alt="Sony WH-1000XM5">
                             <div class="review-overlay">
@@ -895,7 +807,7 @@
 
                 <!-- Sennheiser HD 600 -->
                 <article class="review-card" data-type="over-ear" data-features="amp-required" data-price="400" data-rating="78">
-                    <a href="review/review-sennheiser-hd-600.html" class="review-link">
+                    <a href="review-sennheiser-hd-600.html" class="review-link">
                         <div class="review-image">
                             <img src="img/senn_hd_600.jpeg" alt="Sennheiser HD 600">
                             <div class="review-overlay">
@@ -921,7 +833,7 @@
 
                 <!-- AirPods Max -->
                 <article class="review-card" data-type="over-ear" data-features="wireless anc" data-price="450" data-rating="80">
-                    <a href="review/review-airpods-max.html" class="review-link">
+                    <a href="review-airpods-max.html" class="review-link">
                         <div class="review-image">
                             <img src="img/airpods_max.jpeg" alt="AirPods Max">
                             <div class="review-overlay">
@@ -947,7 +859,7 @@
 
                 <!-- Beyerdynamic DT 1770 Pro -->
                 <article class="review-card" data-type="over-ear" data-features="amp-required" data-price="500" data-rating="74">
-                    <a href="review/review-beyerdynamic-dt-1770-pro.html" class="review-link">
+                    <a href="review-beyerdynamic-dt-1770-pro.html" class="review-link">
                         <div class="review-image">
                             <img src="img/dt1770_pro.jpeg" alt="Beyerdynamic DT 1770 Pro">
                             <div class="review-overlay">
@@ -973,7 +885,7 @@
 
                 <!-- Beyerdynamic DT 1990 Pro -->
                 <article class="review-card" data-type="over-ear" data-features="amp-required" data-price="500" data-rating="89">
-                    <a href="review/review-beyerdynamic-dt-1990-pro.html" class="review-link">
+                    <a href="review-beyerdynamic-dt-1990-pro.html" class="review-link">
                         <div class="review-image">
                             <img src="img/dt1990_pro.webp" alt="Beyerdynamic DT 1990 Pro">
                             <div class="review-overlay">
@@ -999,7 +911,7 @@
 
                 <!-- Sony WF-1000XM4 -->
                 <article class="review-card" data-type="iem" data-features="wireless anc" data-price="280" data-rating="71">
-                    <a href="review/review-sony-wf-1000xm4.html" class="review-link">
+                    <a href="review-sony-wf-1000xm4.html" class="review-link">
                         <div class="review-image">
                             <img src="img/Sony-WF-1000XM4.jpeg" alt="Sony WF-1000XM4">
                             <div class="review-overlay">
@@ -1025,7 +937,7 @@
 
                 <!-- Bowers & Wilkins PI7 -->
                 <article class="review-card" data-type="iem" data-features="wireless anc" data-price="500" data-rating="86">
-                    <a href="review/review-bowers-wilkins-pi7.html" class="review-link">
+                    <a href="review-bowers-wilkins-pi7.html" class="review-link">
                         <div class="review-image">
                             <img src="img/bowerwilkins_pi7.jpg" alt="Bowers & Wilkins PI7">
                             <div class="review-overlay">
@@ -1051,7 +963,7 @@
 
                 <!-- Sennheiser HD800 -->
                 <article class="review-card" data-type="over-ear" data-features="amp-required" data-price="1700" data-rating="72">
-                    <a href="review/review-sennheiser-hd800.html" class="review-link">
+                    <a href="review-sennheiser-hd800.html" class="review-link">
                         <div class="review-image">
                             <img src="img/senn_hd_800.png" alt="Sennheiser HD800">
                             <div class="review-overlay">
@@ -1077,7 +989,7 @@
 
                 <!-- Hifiman HE1000 -->
                 <article class="review-card" data-type="over-ear" data-features="amp-required" data-price="3000" data-rating="87">
-                    <a href="review/review-hifiman-he1000.html" class="review-link">
+                    <a href="review-hifiman-he1000.html" class="review-link">
                         <div class="review-image">
                             <img src="img/hifiman_he1000.jpg" alt="Hifiman HE1000">
                             <div class="review-overlay">
@@ -1103,7 +1015,7 @@
 
                 <!-- Hifiman Susvara -->
                 <article class="review-card" data-type="over-ear" data-features="amp-required" data-price="6000" data-rating="80">
-                    <a href="review/review-hifiman-susvara.html" class="review-link">
+                    <a href="review-hifiman-susvara.html" class="review-link">
                         <div class="review-image">
                             <img src="img/hifiman_susvara.jpg" alt="Hifiman Susvara">
                             <div class="review-overlay">
@@ -1126,37 +1038,3 @@
                         </div>
                     </a>
                 </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Hz Club</h4>
-                <p>Brutally honest headphone reviews.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Navigate</h4>
-                <ul>
-                    <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="wizard.html">Wizard</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Connect</h4>
-                <p>Questions? <a href="mailto:hello@hzclub.com">hello@hzclub.com</a></p>
-                <p>Press J/K to navigate reviews</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Hz Club. Built like a Leica, sounds like a film score.</p>
-        </div>
-    </footer>
-
-    <script src="reviews.js"></script>
-</body>
-</html>

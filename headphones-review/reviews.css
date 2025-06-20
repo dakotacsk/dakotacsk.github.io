@@ -110,6 +110,123 @@
     font-size: 1.125rem;
 }
 
+/* Filter Bar */
+.filter-bar {
+    background-color: var(--white);
+    border-bottom: 3px solid var(--text-main);
+    padding: var(--space-l) 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.filter-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-m);
+    align-items: end;
+}
+
+.filter-group {
+    position: relative;
+}
+
+.filter-group label {
+    display: block;
+    font-family: var(--font-header);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-xs);
+    color: var(--text-main);
+}
+
+.filter-group select {
+    width: 100%;
+    padding: var(--space-s) var(--space-m);
+    padding-right: 40px;
+    background-color: var(--bg-main);
+    border: 2px solid var(--text-main);
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+/* Custom dropdown arrow */
+.filter-group::after {
+    content: '▼';
+    position: absolute;
+    right: var(--space-m);
+    bottom: 14px;
+    font-size: 0.75rem;
+    pointer-events: none;
+    transition: transform 0.2s ease;
+}
+
+.filter-group:hover::after {
+    transform: translateY(2px);
+}
+
+.filter-group select:hover {
+    background-color: var(--white);
+    box-shadow: 4px 4px 0 var(--text-main);
+    transform: translate(-2px, -2px);
+}
+
+.filter-group select:focus {
+    outline: none;
+    background-color: var(--white);
+    box-shadow: 6px 6px 0 var(--accent-red);
+    transform: translate(-3px, -3px);
+}
+
+/* Active filter state */
+.filter-group select:not([value=""]) {
+    background-color: var(--text-main);
+    color: var(--white);
+}
+
+.filter-group select:not([value=""]):hover {
+    background-color: var(--text-main);
+    color: var(--white);
+}
+
+/* Sort by special styling */
+#sortBy {
+    border-color: var(--accent-red);
+}
+
+.filter-group:has(#sortBy)::after {
+    color: var(--accent-red);
+}
+
+/* Filter count indicator */
+.filter-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--accent-red);
+    color: var(--white);
+    font-size: 0.625rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    min-width: 20px;
+    text-align: center;
+    display: none;
+}
+
+.filter-count.active {
+    display: block;
+}
+
 /* No Results */
 .no-results {
     text-align: center;
@@ -126,12 +243,95 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .filters-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-m);
+    .filter-bar {
+        padding: var(--space-m) 0;
+    }
+    
+    .filter-controls {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-s);
+    }
+    
+    .filter-group label {
+        font-size: 0.625rem;
+    }
+    
+    .filter-group select {
+        font-size: 0.75rem;
+        padding: var(--space-xs) var(--space-s);
+        padding-right: 30px;
+    }
+    
+    .filter-group::after {
+        right: var(--space-s);
+        bottom: 10px;
+        font-size: 0.625rem;
     }
     
     .review-excerpt {
         display: none;
     }
+}
+
+@media (max-width: 480px) {
+    .filter-controls {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Filter Animation Effects */
+.review-card {
+    animation: cardFadeIn 0.4s ease-out;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.review-card.filtering {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Filter bar sticky effect */
+.filter-bar.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Clear filters button */
+.clear-filters {
+    position: absolute;
+    top: 50%;
+    right: var(--space-l);
+    transform: translateY(-50%);
+    padding: var(--space-xs) var(--space-m);
+    background-color: var(--accent-red);
+    color: var(--white);
+    border: 2px solid var(--accent-red);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: none;
+}
+
+.clear-filters.show {
+    display: block;
+}
+
+.clear-filters:hover {
+    background-color: var(--white);
+    color: var(--accent-red);
+    transform: translateY(-50%) scale(1.05);
 }

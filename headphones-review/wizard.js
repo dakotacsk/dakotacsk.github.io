@@ -504,6 +504,15 @@ function findMatches() {
     displayMatches(topMatches);
 }
 
+// Helper function to generate review URL
+function getReviewURL(name) {
+    // Generate consistent filename from headphone name
+    const filename = `review/review-${name.toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '')}.html`;
+    return filename;
+}
+
 // Display matches
 function displayMatches(matches) {
     const resultsSection = document.getElementById('wizardResults');
@@ -511,6 +520,7 @@ function displayMatches(matches) {
     
     matchGrid.innerHTML = matches.map((match, index) => {
         const zinger = getZinger(match, index);
+        const reviewURL = getReviewURL(match.name);
         return `
             <div class="match-card">
                 <img src="${match.image}" alt="${match.name}" class="match-image">
@@ -521,7 +531,7 @@ function displayMatches(matches) {
                         ${match.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                     </div>
                     <p class="match-description">${zinger}</p>
-                    <a href="review-${match.name.toLowerCase().replace(/\s+/g, '-')}.html" class="match-link">Read Full Review →</a>
+                    <a href="${reviewURL}" class="match-link">Read Full Review →</a>
                 </div>
             </div>
         `;

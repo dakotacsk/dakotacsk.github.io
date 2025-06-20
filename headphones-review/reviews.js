@@ -8,8 +8,59 @@ const reviewCards = [];
 document.addEventListener('DOMContentLoaded', () => {
     initializeFilters();
     initializeKeyboardNavigation();
+    initializeClearFilters();
+    initializeScrollEffect();
     cacheReviewCards();
 });
+
+// Add clear filters functionality
+function initializeClearFilters() {
+    const filterBar = document.querySelector('.filter-bar');
+    if (!filterBar) return;
+    
+    // Create clear button
+    const clearButton = document.createElement('button');
+    clearButton.className = 'clear-filters';
+    clearButton.textContent = 'Clear All';
+    clearButton.addEventListener('click', clearAllFilters);
+    
+    // Position the button in the filter bar
+    filterBar.style.position = 'relative';
+    filterBar.appendChild(clearButton);
+}
+
+function clearAllFilters() {
+    const filterType = document.getElementById('filterType');
+    const filterFeatures = document.getElementById('filterFeatures');
+    const filterPrice = document.getElementById('filterPrice');
+    const sortBy = document.getElementById('sortBy');
+    
+    if (filterType) filterType.value = '';
+    if (filterFeatures) filterFeatures.value = '';
+    if (filterPrice) filterPrice.value = '';
+    if (sortBy) sortBy.value = 'rating-desc';
+    
+    applyFilters();
+}
+
+// Add scroll effect to filter bar
+function initializeScrollEffect() {
+    const filterBar = document.querySelector('.filter-bar');
+    if (!filterBar) return;
+    
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 100) {
+            filterBar.classList.add('scrolled');
+        } else {
+            filterBar.classList.remove('scrolled');
+        }
+        
+        lastScroll = currentScroll;
+    });
+}
 
 // Cache review cards for performance
 function cacheReviewCards() {
@@ -29,31 +80,52 @@ function cacheReviewCards() {
 function initializeFilters() {
     const sortBy = document.getElementById('sortBy');
     const filterType = document.getElementById('filterType');
-    const filterFeature = document.getElementById('filterFeature');
+    const filterFeatures = document.getElementById('filterFeatures');
+    const filterPrice = document.getElementById('filterPrice');
     
-    sortBy.addEventListener('change', applyFilters);
-    filterType.addEventListener('change', applyFilters);
-    filterFeature.addEventListener('change', applyFilters);
+    // Update filter IDs to match HTML
+    if (sortBy) sortBy.addEventListener('change', applyFilters);
+    if (filterType) filterType.addEventListener('change', applyFilters);
+    if (filterFeatures) filterFeatures.addEventListener('change', applyFilters);
+    if (filterPrice) filterPrice.addEventListener('change', applyFilters);
+    
+    // Add filter count indicators
+    updateFilterCounts();
 }
 
 // Apply filters and sorting
 function applyFilters() {
-    const sortBy = document.getElementById('sortBy').value;
-    const filterType = document.getElementById('filterType').value;
-    const filterFeature = document.getElementById('filterFeature').value;
+    const sortBy = document.getElementById('sortBy')?.value || 'rating-desc';
+    const filterType = document.getElementById('filterType')?.value || '';
+    const filterFeatures = document.getElementById('filterFeatures')?.value || '';
+    const filterPrice = document.getElementById('filterPrice')?.value || '';
     
     // Filter cards
     let filteredCards = reviewCards.filter(card => {
         let showCard = true;
         
         // Type filter
-        if (filterType !== 'all' && card.type !== filterType) {
+        if (filterType && card.type !== filterType) {
             showCard = false;
         }
         
-        // Feature filter
-        if (filterFeature !== 'all' && !card.features.includes(filterFeature)) {
-            showCard = false;
+        // Features filter
+        if (filterFeatures) {
+            if (filterFeatures === 'wireless' && !card.features.includes('wireless')) {
+                showCard = false;
+            } else if (filterFeatures === 'anc' && !card.features.includes('anc')) {
+                showCard = false;
+            } else if (filterFeatures === 'wired' && card.features.includes('wireless')) {
+                showCard = false;
+            }
+        }
+        
+        // Price filter
+        if (filterPrice) {
+            const [min, max] = filterPrice.split('-').map(n => parseInt(n) || 99999);
+            if (card.price < min || card.price > max) {
+                showCard = false;
+            }
         }
         
         return showCard;
@@ -62,49 +134,99 @@ function applyFilters() {
     // Sort cards
     filteredCards.sort((a, b) => {
         switch (sortBy) {
-            case 'rating':
+            case 'rating-desc':
                 return b.rating - a.rating;
-            case 'price-low':
+            case 'rating-asc':
+                return a.rating - b.rating;
+            case 'price-asc':
                 return a.price - b.price;
-            case 'price-high':
+            case 'price-desc':
                 return b.price - a.price;
-            case 'newest':
+            case 'name-asc':
+                return a.element.querySelector('h3').textContent.localeCompare(b.element.querySelector('h3').textContent);
             default:
-                return 0; // Maintain original order
+                return 0;
         }
     });
     
     // Update DOM
     updateReviewsGrid(filteredCards);
+    updateFilterCounts();
+}
+
+// Update filter count indicators
+function updateFilterCounts() {
+    let activeFilters = 0;
+    
+    const filterType = document.getElementById('filterType');
+    const filterFeatures = document.getElementById('filterFeatures');
+    const filterPrice = document.getElementById('filterPrice');
+    
+    if (filterType && filterType.value) activeFilters++;
+    if (filterFeatures && filterFeatures.value) activeFilters++;
+    if (filterPrice && filterPrice.value) activeFilters++;
+    
+    // Show/hide clear button
+    const clearButton = document.querySelector('.clear-filters');
+    if (clearButton) {
+        clearButton.classList.toggle('show', activeFilters > 0);
+    }
+    
+    // Update active state on select elements
+    [filterType, filterFeatures, filterPrice].forEach(select => {
+        if (select) {
+            if (select.value) {
+                select.style.backgroundColor = 'var(--text-main)';
+                select.style.color = 'var(--white)';
+            } else {
+                select.style.backgroundColor = 'var(--bg-main)';
+                select.style.color = 'var(--text-main)';
+            }
+        }
+    });
 }
 
 // Update the reviews grid
 function updateReviewsGrid(filteredCards) {
     const grid = document.getElementById('reviewsGrid');
     
-    // Hide all cards first
+    // Add filtering class for animation
     reviewCards.forEach(card => {
-        card.element.style.display = 'none';
-        card.element.style.order = '';
+        card.element.classList.add('filtering');
     });
     
-    // Show and order filtered cards
-    filteredCards.forEach((card, index) => {
-        card.element.style.display = 'block';
-        card.element.style.order = index;
-    });
+    // After a short delay, update visibility and remove animation class
+    setTimeout(() => {
+        // Hide all cards first
+        reviewCards.forEach(card => {
+            card.element.style.display = 'none';
+            card.element.style.order = '';
+        });
+        
+        // Show and order filtered cards
+        filteredCards.forEach((card, index) => {
+            card.element.style.display = 'block';
+            card.element.style.order = index;
+            // Stagger the animation
+            setTimeout(() => {
+                card.element.classList.remove('filtering');
+            }, index * 30);
+        });
+    }, 150);
     
     // Show no results message if needed
     if (filteredCards.length === 0) {
-        if (!document.querySelector('.no-results')) {
-            const noResults = document.createElement('div');
-            noResults.className = 'no-results';
-            noResults.innerHTML = `
-                <h3>No headphones found</h3>
-                <p>Try adjusting your filters to see more results.</p>
-            `;
-            grid.appendChild(noResults);
-        }
+        setTimeout(() => {
+            if (!document.querySelector('.no-results')) {
+                const noResults = document.createElement('div');
+                noResults.className = 'no-results';
+                noResults.innerHTML = `
+                    <h3>No headphones found</h3>
+                    <p>Try adjusting your filters to see more results.</p>
+                `;
+                grid.appendChild(noResults);
+            }
+        }, 200);
     } else {
         const noResults = document.querySelector('.no-results');
         if (noResults) noResults.remove();

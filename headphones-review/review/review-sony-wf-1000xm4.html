@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sony WF-1000XM4 Review — Hz Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Review-specific styles */
+        .review-hero {
+            min-height: 50vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            border-bottom: 2px solid var(--text-main);
+        }
+        
+        .review-hero-content {
+            padding: var(--space-xl) var(--space-l);
+        }
+        
+        .review-hero-image {
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .review-hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(20%);
+        }
+        
+        .review-score {
+            font-family: var(--font-header);
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--accent-red);
+            margin-bottom: var(--space-m);
+        }
+        
+        .review-specs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-m);
+            margin-bottom: var(--space-l);
+        }
+        
+        .spec-item {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xs);
+        }
+        
+        .spec-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gray-border);
+        }
+        
+        .spec-value {
+            font-family: var(--font-header);
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+        
+        .review-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--space-xl) var(--space-l);
+        }
+        
+        .review-section {
+            margin-bottom: var(--space-xl);
+        }
+        
+        .review-section h2 {
+            font-size: 2rem;
+            margin-bottom: var(--space-m);
+            text-transform: uppercase;
+        }
+        
+        .review-section p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: var(--space-m);
+        }
+        
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-l);
+            margin-top: var(--space-l);
+        }
+        
+        .pros, .cons {
+            border: 2px solid var(--text-main);
+            padding: var(--space-m);
+            background-color: var(--white);
+        }
+        
+        .pros h3, .cons h3 {
+            font-size: 1.25rem;
+            margin-bottom: var(--space-m);
+            text-transform: uppercase;
+        }
+        
+        .pros ul, .cons ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .pros li, .cons li {
+            position: relative;
+            padding-left: var(--space-l);
+            margin-bottom: var(--space-s);
+        }
+        
+        .pros li::before {
+            content: '+';
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+            color: var(--highlight-cyan);
+        }
+        
+        .cons li::before {
+            content: '−';
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+            color: var(--accent-red);
+        }
+        
+        .verdict {
+            background-color: var(--text-main);
+            color: var(--bg-main);
+            padding: var(--space-l);
+            margin-top: var(--space-xl);
+        }
+        
+        .verdict h2 {
+            color: var(--bg-main);
+            margin-bottom: var(--space-m);
+        }
+        
+        .verdict p {
+            color: var(--bg-main);
+        }
+        
+        @media (max-width: 768px) {
+            .review-hero {
+                grid-template-columns: 1fr;
+            }
+            
+            .review-hero-image {
+                height: 300px;
+            }
+            
+            .review-specs {
+                grid-template-columns: 1fr;
+            }
+            
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Hz Club</a>
+            <ul class="nav-links">
+                <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="wizard.html" class="nav-link">Wizard</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Review Hero -->
+    <section class="review-hero">
+        <div class="review-hero-content">
+            <div class="review-score">71%</div>
+            <h1>Sony WF-1000XM4</h1>
+            <div class="review-tags">
+                <span class="tag">TWS</span> <span class="tag">ANC</span> <span class="tag">Balanced</span>
+            </div>
+            <div class="review-specs">
+                <div class="spec-item">
+                    <span class="spec-label">Price</span>
+                    <span class="spec-value">$280</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Type</span>
+                    <span class="spec-value">IEM</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Sound Signature</span>
+                    <span class="spec-value">Balanced</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Fit</span>
+                    <span class="spec-value">Earbuds</span>
+                </div>
+            </div>
+        </div>
+        <div class="review-hero-image">
+            <img src="img/Sony-WF-1000XM4.jpeg" alt="Sony WF-1000XM4">
+            <div class="vhs-overlay"></div>
+        </div>
+    </section>
+
+    <!-- Review Content -->
+    <article class="review-content">
+        <!-- One-liner -->
+        <section class="review-section">
+            <p style="font-size: 1.5rem; font-family: var(--font-header); font-weight: 600; font-style: italic;">
+                Balanced sound TWS with ANC.
+            </p>
+        </section>
+
+        <!-- Sound Section -->
+        <section class="review-section">
+            <h2>Sound</h2>
+            <p>Well-balanced tuning that does nothing wrong. Slight warmth keeps things musical while maintaining clarity. Jack of all trades, master of most.</p>
+        </section>
+
+        <!-- Build & Comfort Section -->
+        <section class="review-section">
+            <h2>Build & Comfort</h2>
+            <p>IEM build is premium with quality cables and housings. Fit depends on your ear shape but includes multiple tip sizes. Modern design that looks as good as it sounds.</p>
+        </section>
+
+        <!-- Features Section -->
+        <section class="review-section">
+            <h2>Features</h2>
+            <p>Bluetooth connectivity with reliable connection and decent battery life. Active noise cancelling that effectively reduces ambient noise.</p>
+        </section>
+
+        <!-- Pros & Cons -->
+        <div class="pros-cons">
+            <div class="pros">
+                <h3>What Works</h3>
+                <ul>
+                    <li>Wireless freedom</li>
+                    <li>Effective noise cancelling</li>
+                    <li>Easy to drive</li>
+                </ul>
+            </div>
+            <div class="cons">
+                <h3>What Doesn't</h3>
+                <ul>
+                    <li>Limited soundstage</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Verdict -->
+        <section class="verdict">
+            <h2>Verdict</h2>
+            <p>At 71%, the Sony WF-1000XM4 has its moments but faces stiff competition. There are better options available. For die-hard fans of the brand only.</p>
+        </section>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Hz Club</h4>
+                <p>Brutally honest headphone reviews.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="wizard.html">Wizard</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <p>Questions? <a href="mailto:hello@hzclub.com">hello@hzclub.com</a></p>
+                <p>Press J/K to navigate reviews</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hz Club. Built like a Leica, sounds like a film score.</p>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>

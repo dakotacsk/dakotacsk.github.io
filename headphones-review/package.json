@@ -1,0 +1,23 @@
+{
+  "name": "headphones-review",
+  "version": "1.0.0",
+  "description": "Hz Club headphones review site with CSV export/import",
+  "main": "index.js",
+  "scripts": {
+    "export-csv": "node export-to-csv.js",
+    "generate-reviews": "node generate-reviews-from-csv.js",
+    "build": "npm run export-csv && npm run generate-reviews"
+  },
+  "keywords": [
+    "headphones",
+    "reviews",
+    "audio"
+  ],
+  "author": "Hz Club",
+  "license": "MIT",
+  "dependencies": {
+    "csv-parse": "^5.5.3",
+    "csv-parser": "^3.2.0",
+    "csv-stringify": "^6.4.5"
+  }
+}

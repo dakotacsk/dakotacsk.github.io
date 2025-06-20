@@ -624,7 +624,7 @@ const headphonesDatabase = [
     }
 ];
 
-// Export for use in wizard
+// Export for use in wizard and Node.js scripts
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = headphonesDatabase;
+    module.exports = { headphonesDatabase };
 }
