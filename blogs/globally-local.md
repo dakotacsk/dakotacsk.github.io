@@ -1,5 +1,10 @@
 # Globally Local: A Reflection on Local Democracy
 
+
+![Town Hall for Envision Needham](img/town_hall.jpeg)
+*A photo I took of the Envision Needham Town Hall.*
+
+
 ## What is Local Democracy to Me
 
 I often take things for granted. When I was a kid, I remember seeing notices from the district as I took the elevator up to my apartment. They would inform me of new mouse traps being placed around the area, a new stop sign being installed, and maintenance to update the fireproof paint and replace the leaking pipes. I remember believing that some magical schedule determined the dates of all these notices. I also recall my dad spending some of his Sundays at the apartment complex's Owners' Committee arguing over which vendor we should buy our scaffold nets from and how much we should spend on each construction project. I never understood the allure of spending your Sunday arguing with strangers when you could just stay at home and watch Phineas and Ferb.
