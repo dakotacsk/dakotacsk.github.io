@@ -17,7 +17,38 @@
 
   /* ── Tiny Markdown → HTML converter (no dependencies) ──────────── */
   function md(text) {
+    // Resolve relative image paths to blogs/ directory
+    function imgSrc(src) {
+      if (/^https?:\/\//.test(src) || src.startsWith("/")) return src;
+      return BLOGS_DIR + src;
+    }
+
     let html = text
+      // images with caption on next line: ![alt](src)\n*caption*
+      .replace(
+        /!\[([^\]]*)\]\(([^)]+)\)\n\*([^*]+(?:\*\*[^*]+\*\*[^*]*)*)\*/g,
+        function (_, alt, src, caption) {
+          return (
+            '<figure class="blog-figure"><img src="' +
+            imgSrc(src) +
+            '" alt="' +
+            alt +
+            '" class="blog-img"><figcaption>' +
+            caption +
+            "</figcaption></figure>"
+          );
+        }
+      )
+      // standalone images: ![alt](src)
+      .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, function (_, alt, src) {
+        return (
+          '<figure class="blog-figure"><img src="' +
+          imgSrc(src) +
+          '" alt="' +
+          alt +
+          '" class="blog-img"></figure>'
+        );
+      })
       // code blocks (``` ... ```)
       .replace(/```(\w*)\n([\s\S]*?)```/g, function (_, lang, code) {
         return (
@@ -32,7 +63,8 @@
       .replace(/^### (.+)$/gm, "<h3>$1</h3>")
       .replace(/^## (.+)$/gm, "<h2>$1</h2>")
       .replace(/^# (.+)$/gm, "<h1>$1</h1>")
-      // bold & italic
+      // bold & italic (bold first so ** is consumed before *)
+      .replace(/\*\*\*(.+?)\*\*\*/g, "<strong><em>$1</em></strong>")
       .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
       .replace(/\*(.+?)\*/g, "<em>$1</em>")
       // horizontal rules
@@ -49,7 +81,7 @@
       .map(function (block) {
         block = block.trim();
         if (!block) return "";
-        if (/^<[hupol]|^<hr|^<pre/.test(block)) return block;
+        if (/^<[hufpol]|^<hr|^<pre|^<fig/.test(block)) return block;
         return "<p>" + block.replace(/\n/g, "<br>") + "</p>";
       })
       .join("\n");

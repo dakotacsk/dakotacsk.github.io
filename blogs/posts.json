@@ -6,5 +6,13 @@
     "tags": ["Civic"],
     "excerpt": "A reflection on my experience with local democracy.",
     "file": "globally-local.md"
+  },
+  {
+    "id": "inside-scoop",
+    "title": "On Collaborative Design: A Story About Dog Poop",
+    "date": "2025-03-07",
+    "tags": ["Technology", "Life"],
+    "excerpt": "What I learned about interviewing from a story about dog poop, awkward silences, and the power of asking difficult questions.",
+    "file": "inside-scoop.md"
   }
 ]

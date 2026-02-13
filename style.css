@@ -487,6 +487,32 @@ body {
   line-height: 1.6;
 }
 
+/* Blog figures and images */
+.blog-figure {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.blog-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
+}
+
+.blog-figure figcaption {
+  margin-top: 0.85rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.6;
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Hero Section */
 .hero-section {
   margin-bottom: 3rem;
