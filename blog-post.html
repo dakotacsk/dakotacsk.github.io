@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Blog Post - Dakota Chang" />
+    <title>Blog Post | Dakota Chang</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="archive/personal_portfolio/img/pfp_profile.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <video
+      id="scroll-bg-video"
+      class="scroll-bg-video"
+      muted
+      playsinline
+      preload="metadata"
+    >
+      <source src="./blob-moving-bg.mp4" type="video/mp4" />
+    </video>
+
+    <div class="container">
+      <nav class="nav-main" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo">Dakota Chang</a>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="blog.html" class="nav-link nav-link-active"
+            >Blogs and Reflections</a
+          >
+        </div>
+      </nav>
+
+      <section class="blog-page">
+        <a href="blog.html" class="blog-back-link">
+          <i class="fas fa-arrow-left"></i> Back to all posts
+        </a>
+
+        <article class="glass-card blog-article-card" id="blog-article">
+          <div class="blog-article-header">
+            <div class="blog-article-tags" id="blog-article-tags"></div>
+            <h1 class="blog-article-title" id="blog-article-title">
+              Loading...
+            </h1>
+            <p class="blog-article-date" id="blog-article-date"></p>
+          </div>
+          <div class="blog-article-body" id="blog-article-body">
+            <p>Loading post content...</p>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="./blog-engine.js"></script>
+  </body>
+</html>

@@ -35,32 +35,63 @@
         <a href="index.html" class="nav-logo">Dakota Chang</a>
         <div class="nav-links">
           <a href="index.html" class="nav-link">Home</a>
-          <a href="blog.html" class="nav-link nav-link-active">Blogs and Reflections</a>
+          <a href="blog.html" class="nav-link nav-link-active"
+            >Blogs and Reflections</a
+          >
         </div>
       </nav>
 
       <section class="blog-page">
         <div class="glass-card blog-header-card">
           <h1 class="blog-title">Blogs and Reflections</h1>
-          <p class="blog-subtitle">Thoughts, learnings, and occasional rambles.</p>
+          <p class="blog-subtitle">
+            Thoughts, learnings, and occasional rambles.
+          </p>
         </div>
 
-        <div class="blog-list">
-          <article class="glass-card blog-post-card">
-            <h2>Coming soon</h2>
-            <p class="blog-post-meta">—</p>
-            <p>First post will appear here. Add your own entries by editing this page or wiring it to a simple generator.</p>
-          </article>
+        <!-- Search & Filter Controls -->
+        <div class="blog-controls">
+          <div class="blog-search-wrap">
+            <i class="fas fa-search blog-search-icon"></i>
+            <input
+              type="text"
+              id="blog-search"
+              class="blog-search"
+              placeholder="Search posts..."
+              autocomplete="off"
+            />
+          </div>
 
-          <article class="glass-card blog-post-card">
-            <h2>Another post</h2>
-            <p class="blog-post-meta">—</p>
-            <p>Placeholder for more writing. Replace these cards with your real posts and links.</p>
-          </article>
+          <div class="blog-tag-filters">
+            <button class="blog-tag-btn active" data-tag="all">All</button>
+            <button class="blog-tag-btn" data-tag="Technology">
+              <i class="fas fa-microchip"></i> Technology
+            </button>
+            <button class="blog-tag-btn" data-tag="Life">
+              <i class="fas fa-leaf"></i> Life
+            </button>
+            <button class="blog-tag-btn" data-tag="Civic">
+              <i class="fas fa-landmark"></i> Civic
+            </button>
+          </div>
+        </div>
+
+        <!-- Blog Posts (rendered dynamically) -->
+        <div class="blog-list" id="blog-list">
+          <p class="blog-loading">Loading posts...</p>
+        </div>
+
+        <!-- Empty state -->
+        <div class="blog-empty" id="blog-empty" style="display: none">
+          <div class="glass-card blog-empty-card">
+            <i class="fas fa-search"></i>
+            <p>No posts found matching your search.</p>
+          </div>
         </div>
       </section>
     </div>
 
     <script src="./script.js"></script>
+    <script src="./blog-engine.js"></script>
   </body>
 </html>
