@@ -147,7 +147,7 @@ body {
 }
 
 .blog-subtitle {
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   color: var(--text-muted);
   margin: 0;
 }
@@ -171,7 +171,7 @@ body {
   left: 1.1rem;
   transform: translateY(-50%);
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   pointer-events: none;
 }
 
@@ -179,7 +179,7 @@ body {
   width: 100%;
   padding: 0.8rem 1rem 0.8rem 2.8rem;
   font-family: "NB International", sans-serif;
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: var(--text-dark);
   background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(16px);
@@ -214,7 +214,7 @@ body {
 
 .blog-tag-btn {
   font-family: "NB International", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 500;
   padding: 0.45rem 1.1rem;
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -243,13 +243,13 @@ body {
 
 .blog-tag-btn i {
   margin-right: 0.3rem;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
 }
 
 /* Inline tags on post cards */
 .blog-tag {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 600;
   padding: 0.2rem 0.65rem;
   border-radius: 1rem;
@@ -257,7 +257,7 @@ body {
   text-transform: uppercase;
 }
 
-.blog-tag--technology {
+.blog-tag--engineering {
   background: rgba(96, 119, 68, 0.15);
   color: var(--primary-green);
 }
@@ -313,13 +313,13 @@ body {
 
 .blog-post-card h2 {
   font-family: "NB International", sans-serif;
-  font-size: 1.35rem;
+  font-size: 1.55rem;
   margin-bottom: 0.5rem;
   color: var(--text-dark);
 }
 
 .blog-post-meta {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: var(--accent-green);
   font-style: italic;
   white-space: nowrap;
@@ -327,13 +327,13 @@ body {
 
 .blog-post-excerpt {
   color: var(--text-muted);
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 1.15rem;
+  line-height: 1.7;
   margin-bottom: 1rem;
 }
 
 .blog-read-more {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--primary-green);
   transition: gap 0.3s ease;
@@ -371,7 +371,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: var(--primary-green);
   text-decoration: none;
   margin-bottom: 1.5rem;
@@ -402,14 +402,14 @@ body {
 
 .blog-article-title {
   font-family: "NB International", sans-serif;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   color: var(--text-dark);
   line-height: 1.3;
   margin-bottom: 0.75rem;
 }
 
 .blog-article-date {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: var(--accent-green);
   font-style: italic;
 }
@@ -417,20 +417,20 @@ body {
 /* Blog article body markdown styles */
 .blog-article-body h2 {
   font-family: "NB International", sans-serif !important;
-  font-size: 1.55rem;
+  font-size: 1.85rem;
   color: var(--text-dark);
   margin: 2rem 0 1rem;
 }
 
 .blog-article-body h3 {
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   color: var(--text-dark);
   margin: 1.5rem 0 0.75rem;
 }
 
 .blog-article-body p {
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 1.2rem;
+  line-height: 1.85;
   color: var(--text-dark);
   margin-bottom: 1.25rem;
 }
@@ -441,8 +441,8 @@ body {
 }
 
 .blog-article-body li {
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 1.2rem;
+  line-height: 1.85;
   color: var(--text-dark);
   margin-bottom: 0.35rem;
 }
@@ -463,7 +463,7 @@ body {
 
 .blog-article-body code {
   font-family: "SF Mono", "Fira Code", monospace;
-  font-size: 0.9em;
+  font-size: 1.05em;
   background: rgba(96, 119, 68, 0.1);
   padding: 0.15rem 0.45rem;
   border-radius: 0.35rem;
@@ -482,15 +482,16 @@ body {
 .blog-article-body pre.blog-code code {
   background: none;
   padding: 0;
-  font-size: 0.88rem;
+  font-size: 1.05rem;
   color: var(--text-dark);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* Blog figures and images */
 .blog-figure {
-  margin: 2rem 0;
+  margin: 2.5rem auto;
   text-align: center;
+  max-width: 100%;
 }
 
 .blog-img {
@@ -504,13 +505,35 @@ body {
 
 .blog-figure figcaption {
   margin-top: 0.85rem;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
   font-style: italic;
-  line-height: 1.6;
-  max-width: 85%;
+  line-height: 1.65;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .blog-figure {
+    max-width: 72%;
+    margin: 3rem auto;
+  }
+
+  .blog-img {
+    border-radius: 1.25rem;
+  }
+
+  .blog-figure figcaption {
+    max-width: 95%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-figure {
+    max-width: 62%;
+    margin: 3.5rem auto;
+  }
 }
 
 /* Hero Section */
@@ -1296,7 +1319,7 @@ p.handwriting-note {
   }
 
   .blog-title {
-    font-size: 2.75rem;
+    font-size: 3.1rem;
   }
 
   .blog-controls {
@@ -1312,7 +1335,7 @@ p.handwriting-note {
   }
 
   .blog-article-title {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   .hero-section {
@@ -1388,7 +1411,7 @@ p.handwriting-note {
   }
 
   .blog-title {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   .blog-header-card {
@@ -1396,7 +1419,7 @@ p.handwriting-note {
   }
 
   .blog-tag-btn {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     padding: 0.4rem 0.85rem;
   }
 
@@ -1405,7 +1428,7 @@ p.handwriting-note {
   }
 
   .blog-post-card h2 {
-    font-size: 1.15rem;
+    font-size: 1.35rem;
   }
 
   .blog-article-card {
@@ -1413,12 +1436,12 @@ p.handwriting-note {
   }
 
   .blog-article-title {
-    font-size: 1.45rem;
+    font-size: 1.75rem;
   }
 
   .blog-article-body p,
   .blog-article-body li {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
 
   .hero-section {

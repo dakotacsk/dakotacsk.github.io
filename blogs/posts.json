@@ -3,15 +3,23 @@
     "id": "globally-local",
     "title": "Globally Local: A Reflection on Local Democracy",
     "date": "2026-02-10",
-    "tags": ["Civic"],
+    "tags": ["Civic", "Life"],
     "excerpt": "A reflection on my experience with local democracy.",
     "file": "globally-local.md"
+  },
+  {
+    "id": "please-tear-it-apart",
+    "title": "Please Tear It Apart! A Commentary on Scrappy Prototypes ",
+    "date": "2025-04-14",
+    "tags": ["Engineering"],
+    "excerpt": "A reflection on what makes a good prototype and how to get feedback.",
+    "file": "please-tear-it-apart.md"
   },
   {
     "id": "inside-scoop",
     "title": "On Collaborative Design: A Story About Dog Poop",
     "date": "2025-03-07",
-    "tags": ["Technology", "Life"],
+    "tags": ["Engineering"],
     "excerpt": "What I learned about interviewing from a story about dog poop, awkward silences, and the power of asking difficult questions.",
     "file": "inside-scoop.md"
   }
