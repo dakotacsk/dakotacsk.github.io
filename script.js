@@ -189,6 +189,16 @@ document.head.appendChild(style);
 // Smooth scroll behavior
 document.documentElement.style.scrollBehavior = "smooth";
 
+// Exp-list fade hint: hide gradient when scrolled to bottom
+document.querySelectorAll(".exp-list").forEach(function (list) {
+  list.addEventListener("scroll", function () {
+    var wrap = list.closest(".exp-list-wrap");
+    if (!wrap) return;
+    var atBottom = list.scrollTop + list.clientHeight >= list.scrollHeight - 4;
+    wrap.classList.toggle("scrolled-bottom", atBottom);
+  });
+});
+
 console.log(
   "✨ Glass morphism effects and scroll-synced background initialized",
 );

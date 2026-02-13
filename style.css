@@ -1055,25 +1055,99 @@ p.handwriting-note {
 }
 
 /* Experience */
-.exp-item {
-  padding: 1rem;
-  margin-bottom: 0.8rem;
-  background: rgba(96, 119, 68, 0.08);
-  border-radius: 1.2rem;
-  border-left: 3px solid var(--primary-green);
+/* Experience — compact card with horizontal scroll */
+.experience-card {
+  padding: 1.25rem 1.5rem;
 }
 
-.exp-item:last-child {
-  margin-bottom: 0;
+.experience-card h2 {
+  margin-bottom: 0.75rem;
+}
+
+.exp-list-wrap {
+  position: relative;
+}
+
+.exp-list-wrap::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 36px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.65));
+  border-radius: 0 0 0.8rem 0.8rem;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.exp-list-wrap.scrolled-bottom::after {
+  opacity: 0;
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  max-height: 130px;
+  overflow-y: auto;
+  padding-right: 0.3rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(96, 119, 68, 0.25) transparent;
+}
+
+.exp-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.exp-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.exp-list::-webkit-scrollbar-thumb {
+  background: rgba(96, 119, 68, 0.25);
+  border-radius: 10px;
+}
+
+.exp-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(96, 119, 68, 0.4);
+}
+
+.exp-item {
+  --exp-color: var(--primary-green);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.5rem 0.9rem;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--exp-color) 15%, transparent),
+    color-mix(in srgb, var(--exp-color) 5%, transparent)
+  );
+  border-radius: 0.8rem;
+  border-left: 3px solid var(--exp-color);
+  min-width: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exp-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--exp-color) 20%, transparent);
 }
 
 .exp-item h4 {
-  margin-bottom: 0.3rem;
+  margin: 0;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .exp-item p {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
 }
 
 /* Profile Section */
@@ -1083,9 +1157,9 @@ p.handwriting-note {
 }
 
 .small-img {
-  width: 70px;
-  height: 70px;
-  border-radius: 1.2rem;
+  width: 130px;
+  height: 130px;
+  border-radius: 1.5rem;
   object-fit: cover;
   border: 2px solid var(--primary-green);
   margin-bottom: 0.8rem;
@@ -1113,28 +1187,6 @@ p.handwriting-note {
 .skills-section p {
   font-size: 0.95rem;
   margin: 0;
-}
-
-/* Experience Items */
-.exp-item {
-  padding: 0.8rem;
-  margin-bottom: 0.6rem;
-  background: rgba(96, 119, 68, 0.08);
-  border-radius: 1rem;
-  border-left: 3px solid var(--primary-green);
-}
-
-.exp-item:last-child {
-  margin-bottom: 0;
-}
-
-.exp-item h4 {
-  margin-bottom: 0.2rem;
-}
-
-.exp-item p {
-  margin: 0;
-  font-size: 0.9rem;
 }
 
 /* Social Grid */
