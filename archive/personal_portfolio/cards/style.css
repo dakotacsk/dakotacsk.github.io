@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px/20px "Lato", Arial, sans-serif;
+  color: #9E9E9E;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 415px) {
+  .slide-container {
+    width: 100% !important;
+    width: 80%;
+  }
+}
+
+.slide-container {
+  margin: auto;
+  width: 600px;
+  text-align: center;
+}
+
+.wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.wrapper:focus {
+  outline: 0;
+}
+
+.fact-card {
+  background: white;
+  width: 300px;
+  display: inline-block;
+  margin: auto;
+  border-radius: 19px;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
+}
+
+.fact-card__image {
+  position: relative;
+  height: 230px;
+  margin-bottom: 35px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+.fact-card__image--bsd img {
+  width: 100%;
+  height: 110%;
+  top: 0px;
+  left: 0px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.fact-card__image--junji img {
+  width: 100%;
+  height: 110%;
+  top: 0px;
+  left: 0px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.fact-card__image--apple_store img {
+  width: 100%;
+  height: 110%;
+  top: 0px;
+  left: 0px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.fact-card__image--communist_party img {
+  width: 100%;
+  height: 110%;
+  top: 0px;
+  left: 0px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.fact-card__image--ibuse img {
+  width: 100%;
+  height: 110%;
+  top: 0px;
+  left: 0px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.fact-card__level {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.fact-card__level--bsd {
+  color: #EC9B3B;
+}
+
+.fact-card__level--junji {
+  color: #EE5487;
+}
+
+.fact-card__level--apple_store {
+  color: #F6901A;
+}
+
+.fact-card__level--communist_party {
+  color: #82BB30;
+}
+
+.fact-card__level--ibuse {
+  color: #4FACFF;
+}
+
+.fact-card__unit-name {
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.fact-card__unit-description {
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.slick-prev {
+  left: 100px;
+  z-index: 999;
+}
+
+.slick-next {
+  right: 100px;
+  z-index: 999;
+}

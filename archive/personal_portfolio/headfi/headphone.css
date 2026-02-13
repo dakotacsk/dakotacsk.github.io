@@ -1,0 +1,63 @@
+body{
+    background-color: #1a191b;
+    padding: 20px;
+    align: center;
+    font-family: "Playfair Display";
+}
+
+p{
+    color: #777777;
+}
+
+h1{
+    color: #bbf;
+}
+
+h4{
+    color: #aaa;
+}
+
+.banner{
+    border-style: dotted;
+    color: #fff;
+}
+.banner img{
+    width: calc(25% - 4px);
+}
+
+.center {
+    margin: auto;
+    width: 100%;
+    padding: 0px;
+}
+
+.card{
+    padding: 10px !important;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+    width: 100%;
+    padding: 10px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .column {
+    flex: 50%;
+    }
+
+    .left{
+    width: 50%;
+    }
+
+    .right{
+    width: 50%;
+    }
+
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+}

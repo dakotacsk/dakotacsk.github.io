@@ -1,153 +1,194 @@
-// Music Player functionality
-class MusicPlayer {
-  constructor() {
-    this.audioElement = document.getElementById('audio');
-    this.playButton = document.querySelector('.play-button');
-    this.isPlaying = false;
-    
-    this.init();
-  }
-  
-  init() {
-    // Add click event listener to play button
-    this.playButton.addEventListener('click', () => this.togglePlayPause());
-    
-    // Add keyboard support (spacebar to play/pause)
-    document.addEventListener('keydown', (e) => {
-      if (e.code === 'Space' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
-        e.preventDefault();
-        this.togglePlayPause();
-      }
-    });
-    
-    // Update button state when audio events occur
-    this.audioElement.addEventListener('play', () => this.updateButtonState(true));
-    this.audioElement.addEventListener('pause', () => this.updateButtonState(false));
-    this.audioElement.addEventListener('ended', () => this.updateButtonState(false));
-  }
-  
-  togglePlayPause() {
-    if (this.audioElement.paused) {
-      this.play();
+// Typing animation for hero subtitle
+const phrases = [
+  "ML Engineer.",
+  "Creative Technologist.",
+  "Film Enthusiast.",
+  "Founder.",
+  "Headphones Lover.",
+];
+
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingSpeed = 100;
+let deletingSpeed = 50;
+let delayBetweenPhrases = 2000;
+
+const typingText = document.getElementById("typing-text");
+
+function typePhrase() {
+  const currentPhrase = phrases[phraseIndex];
+
+  if (!isDeleting) {
+    // Typing
+    if (charIndex < currentPhrase.length) {
+      typingText.textContent += currentPhrase.charAt(charIndex);
+      charIndex++;
+      setTimeout(typePhrase, typingSpeed);
     } else {
-      this.pause();
+      // Finished typing, wait before deleting
+      isDeleting = true;
+      setTimeout(typePhrase, delayBetweenPhrases);
+    }
+  } else {
+    // Deleting
+    if (charIndex > 0) {
+      typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(typePhrase, deletingSpeed);
+    } else {
+      // Finished deleting, move to next phrase
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      setTimeout(typePhrase, 500);
+    }
+  }
+}
+
+// Start typing animation when page loads
+window.addEventListener("load", () => {
+  typePhrase();
+});
+
+// Sync video animation to scroll position (smooth + looping)
+const scrollBgVideo = document.getElementById("scroll-bg-video");
+
+// One viewport height of scroll = one full loop of the video
+function getScrollTargetTime() {
+  if (
+    !scrollBgVideo ||
+    !scrollBgVideo.duration ||
+    isNaN(scrollBgVideo.duration)
+  )
+    return null;
+  const scrollTop = window.scrollY;
+  const scrollPerLoop = window.innerHeight;
+  const loopProgress = (scrollTop / scrollPerLoop) % 1;
+  if (loopProgress < 0) return (loopProgress + 1) * scrollBgVideo.duration;
+  return loopProgress * scrollBgVideo.duration;
+}
+
+const LERP_SPEED = 0.14;
+const LERP_DONE = 0.02;
+
+function lerpVideoTime() {
+  const target = getScrollTargetTime();
+  if (target == null) return false;
+  const duration = scrollBgVideo.duration;
+  let current = scrollBgVideo.currentTime;
+  let diff = target - current;
+  if (Math.abs(diff) > duration * 0.5) {
+    diff += diff > 0 ? -duration : duration;
+  }
+  if (Math.abs(diff) < LERP_DONE) {
+    scrollBgVideo.currentTime = target;
+    return false;
+  }
+  scrollBgVideo.currentTime = current + diff * LERP_SPEED;
+  if (scrollBgVideo.currentTime < 0) scrollBgVideo.currentTime = 0;
+  if (scrollBgVideo.currentTime >= duration) scrollBgVideo.currentTime = duration - 0.001;
+  return true;
+}
+
+let rafId = null;
+function onScroll() {
+  if (rafId != null) return;
+  rafId = requestAnimationFrame(function tick() {
+    rafId = null;
+    const keepGoing = lerpVideoTime();
+    if (keepGoing) rafId = requestAnimationFrame(tick);
+  });
+}
+
+if (scrollBgVideo) {
+  scrollBgVideo.pause();
+
+  let scrollBound = false;
+  const bindScroll = () => {
+    if (scrollBound) return;
+    scrollBound = true;
+    const t = getScrollTargetTime();
+    if (t != null) scrollBgVideo.currentTime = t;
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  };
+
+  scrollBgVideo.addEventListener("loadedmetadata", bindScroll);
+  scrollBgVideo.addEventListener("canplay", bindScroll);
+  if (scrollBgVideo.readyState >= 2) bindScroll();
+}
+
+// Initialize intersection observer for staggered animations
+const observerOptions = {
+  threshold: 0.05,
+  rootMargin: "0px 0px -100px 0px",
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, index) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
+      }, index * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+// Observe all glass cards
+document.querySelectorAll(".glass-card").forEach((card) => {
+  card.style.opacity = "0";
+  card.style.transform = "translateY(20px)";
+  card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+  observer.observe(card);
+});
+
+// Subtle 3D tilt effect on hover
+document.addEventListener("mousemove", (e) => {
+  const cards = document.querySelectorAll(".glass-card");
+  const x = e.clientX / window.innerWidth;
+  const y = e.clientY / window.innerHeight;
+
+  cards.forEach((card, index) => {
+    // Very subtle tilt for depth
+    const tiltX = (y - 0.5) * 2;
+    const tiltY = (x - 0.5) * 2;
+
+    card.style.transform = `perspective(1200px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateZ(${index % 2 === 0 ? 15 : 5}px)`;
+  });
+});
+
+// Reset on mouse leave
+document.addEventListener("mouseleave", () => {
+  const cards = document.querySelectorAll(".glass-card");
+  cards.forEach((card) => {
+    card.style.transform =
+      "perspective(1200px) rotateX(0) rotateY(0) translateZ(0)";
+  });
+});
+
+// Add subtle floating animation
+const style = document.createElement("style");
+style.textContent = `
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
     }
   }
   
-  play() {
-    this.audioElement.play()
-      .then(() => {
-        this.isPlaying = true;
-        console.log('Music started playing');
-      })
-      .catch(error => {
-        console.error('Error playing audio:', error);
-      });
+  .glass-card {
+    animation: float 6s ease-in-out infinite;
   }
-  
-  pause() {
-    this.audioElement.pause();
-    this.isPlaying = false;
-    console.log('Music paused');
-  }
-  
-  updateButtonState(isPlaying) {
-    this.isPlaying = isPlaying;
-    // Add visual feedback
-    this.playButton.setAttribute('aria-pressed', isPlaying.toString());
-    this.playButton.style.opacity = isPlaying ? '0.8' : '1';
-  }
-}
+`;
+document.head.appendChild(style);
 
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-  // Initialize music player
-  const musicPlayer = new MusicPlayer();
-  
-  // Add smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    });
-  });
-  
-  // Add intersection observer for animations
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, observerOptions);
-  
-  // Observe main content sections
-  document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(section);
-  });
-  
-  // Add hover effect for images (excluding navbar and action buttons)
-  const images = document.querySelectorAll('img:not(.navbar img):not(.contact-actions img):not(.play-button img)');
-  images.forEach(img => {
-    img.addEventListener('mouseenter', function() {
-      this.style.transform = 'scale(1.05)';
-      this.style.transition = 'transform 0.3s ease';
-    });
-    
-    img.addEventListener('mouseleave', function() {
-      this.style.transform = 'scale(1)';
-    });
-  });
-  
-  // Console easter egg
-  console.log('%c Welcome to Dakota\'s MySpace! 🎵', 'font-size: 20px; color: #749; font-weight: bold;');
-  console.log('%c Built with love and nostalgia ❤️', 'font-size: 14px; color: #617830;');
-});
+// Smooth scroll behavior
+document.documentElement.style.scrollBehavior = "smooth";
 
-// Utility function for debouncing
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-// Handle window resize for responsive adjustments
-const handleResize = debounce(() => {
-  const width = window.innerWidth;
-  const musicPlayer = document.querySelector('.music-player');
-  
-  // Adjust music player position on small screens
-  if (width < 768 && musicPlayer) {
-    musicPlayer.style.bottom = '10px';
-    musicPlayer.style.left = '10px';
-  } else if (musicPlayer) {
-    musicPlayer.style.bottom = '20px';
-    musicPlayer.style.left = '20px';
-  }
-}, 250);
-
-window.addEventListener('resize', handleResize);
-
-// Export for potential future use
-window.MusicPlayer = MusicPlayer;
+console.log(
+  "✨ Glass morphism effects and scroll-synced background initialized",
+);

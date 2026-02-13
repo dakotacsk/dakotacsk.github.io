@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="icon" href="img/favicon.ico">
+    <title>Arts Appreciation</title>
+    <style media="screen">
+      html{
+        background-image: url('https://i.gifer.com/7GKm.gif');
+        background-repeat: repeat-y;
+        background-size: cover;
+      }
+
+      body{
+        font-family: "Playfair Display";
+        margin: auto;
+        width: 80%;
+        padding: 10px;
+        text-align: center;
+        height: 100vh;
+        background-color: rgb(0,0,0,0);
+        color: #FFF;
+      }
+
+      a{
+        text-decoration: none!important;
+      }
+
+      .button{
+        margin: auto;
+        width: 50%;
+        z-index: 10;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+
+        font-family: 'Playfair Display';
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1.7px;
+        text-transform: uppercase;
+        color: #1d213f;
+
+        padding: 0 32px;
+        border: none;
+        border-radius: 4px;
+        outline: none;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(#ddd, 0.8);
+      }
+
+      .underline{
+        position: relative;
+      }
+
+      .underline::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 2px;
+        background-color: #1d213f;
+        transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .underline:hover::before{
+          left: 0;
+          right: auto;
+          width: 100%;
+        }
+      }
+      blockquote{
+        margin: auto;
+        width: 60%;
+        padding: 10px;
+        text-align: center;
+        background-color: rgb(0,0,0,0.7)
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Play the songs by clicking on the play button!</h1>
+    <br>
+    <p>Ethel Waters: <br>
+      Ethel Waters was a black singer and actress who was born in 1896. She was famous for her vaudeville performances in the 1920s, and for her blues singing. She also appeared on Broadway and in TV shows and movies. Waters wrote two autobiographies and spent the end of her life touring with the evangelist Billy Graham. She died in 1977. Larsen mentioned the singer in Larsen's <i>Passing</i> multiple times.</p>
+    <embed type="text/html" src="vinyls/ethelWatersAmIBlue/index_ethelWatersAmIBlue.html" width="90%" height="50%">
+    <embed type="text/html" src="vinyls/ethelWatersStormyWeather/index_ethelWatersStormyWeather.html" width="90%" height="50%">
+    <p>Josephine Baker:
+      <br>
+      Josephine Baker was an African American entertainer, activist, and French Resistance agent. She was regarded as one of the most famous Americans living overseas and was known mainly for being a civil rights activists. Baker was a key member in the NAACP working alongside Martin Luther King Jr. Her career was primarily centered in Europe, mostly in France. Baker devoted most of her life to fighting racism and segregation in the United States. Both a singer and dancer (also practically comedian) she used her hardships to create a silly masterpiece of giggles and controversy to get fame (something which we find to be very common today), but to break barriers on stage and in the crowd. She was also mentioned multiple times in <i>Passing</i> by Larsen.</p>
+    <embed type="text/html" src="vinyls/josephineBakerThenIllBeHappy/index_josephineBakerThenIllBeHappy.html" width="90%" height="50%">
+    <br>
+
+    <h1><u>Poetry</u></h1>
+    <blockquote cite="#">
+      One three centuries removed
+      <br>
+      From the scenes his father loved,
+      <br>
+      Spicy grove, cinnamon tree,
+      <br>
+      What is Africa to me?
+    </blockquote>
+    <figcaption>by <i>Countee Cullen</i></figcaption>
+    <br>
+    <p>Countee Cullen was a well-known African American poet during the Harlem Renaissance. He wrote about African American racial experiences and was influenced by European poets. He had a difficult childhood, with his parents and brother dying and moving in with his grandmother. He was a part of his high school's newspaper and literary magazine. He won city-wide poetry competitions and attended New York University for undergrad. During his college years he was awarded the witter Bynner Poetry Prize. Countee Cullen’s poem “Heritage” is referenced in Passing a great amount. </p>
+    <br>
+    <p>Sources: YouTube, <a href="https://medium.com/@womeninliterature230/figures-of-the-harlem-renaissance-and-their-role-in-nella-larsens-passing-a2e8356fcbdc" target="_blank">Medium</a></p>
+    <br><br><br>
+    <a href="index.html"><button class="button underline">
+      Go Back
+    </button></a>
+    <br><br><br>
+  </body>
+</html>

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XC3MRPXP5Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XC3MRPXP5Q');
+</script>
+<link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
+
+<style>
+  .horizontal_line{
+    margin-top: 0rem;
+    margin-bottom: 3rem;
+    border: 0;
+    border-top: 5px solid rgba(0, 0, 0, 1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  nav {
+    width: 100% auto;
+  }
+
+  button:hover,
+  button:focus {
+    background-color: #eeeeee; /* Add a dark-grey background on hover */
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+  }
+
+  button {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+  }
+
+  #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    font-size: 18px; /* Increase font size */
+    background: #FFFFFF;
+  }
+
+  /*top menu*/
+  nav {
+    text-align: center;
+    width: 100%;
+    background: #2C2626;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 10;
+    display: block;
+    height: 2.7vw;
+  }
+
+  #primary_nav_wrap
+  {
+  	margin-top:0px;
+  }
+
+  #primary_nav_wrap ul
+  {
+  	list-style:none;
+  	position:absolute;
+  	float:left;
+  	margin:0;
+  	padding:0;
+    left: 60%;
+  }
+
+  #primary_nav_wrap ul a
+  {
+  	display:block;
+  	color:#FFFFFF;
+  	text-decoration:none;
+  	font-weight:100;
+  	font-size:1.4vw;
+  	line-height:32px;
+  	padding:5px 17px;
+  	font-family: 'Alata';
+  }
+
+  #primary_nav_wrap ul li
+  {
+  	position:relative;
+  	float:left;
+  	margin:0;
+  	padding:0
+  }
+
+  #primary_nav_wrap ul li.current-menu-item
+  {
+  	text-decoration: underline;
+  }
+
+  #primary_nav_wrap ul li:hover
+  {
+  	text-decoration: underline;
+  }
+
+  #primary_nav_wrap ul ul
+  {
+  	display:none;
+  	position:absolute;
+  	top:100%;
+  	left:0;
+  	background:#2C2626;
+  	padding:0
+  }
+
+  #primary_nav_wrap ul ul li
+  {
+  	float:none;
+  	width:200px
+  }
+
+  #primary_nav_wrap ul ul a
+  {
+  	line-height:120%;
+  	padding:10px 15px
+  }
+
+  #primary_nav_wrap ul ul ul
+  {
+  	top:0;
+  	left:100%;
+  }
+
+  #primary_nav_wrap ul li:hover > ul
+  {
+  	display:block;
+  }
+
+  @media screen and (max-width: 769px) {
+    nav{
+      color: #333333;
+      display: block;
+      padding: 0px 10px;
+      height: 8vw;
+      line-height: 60px;
+      font-size: 2.5vw;
+    }
+
+    #primary_nav_wrap ul
+    {
+      left: 0%;
+    }
+
+    #primary_nav_wrap ul a
+    {
+      font-size: 3.5vw;
+    }
+  }
+  @media screen and (max-width: 415px) {
+    #primary_nav_wrap{
+      margin-top:0px;
+      height: 12vw;
+      background: #2C2626;
+    }
+    iframe {
+      max-width: 100vw;
+      display: block;
+      margin: 0 auto;
+      background-color: #777;
+    }
+    embed{
+      max-width: 80vw;
+      margin: 0 auto;
+      display: block;
+      padding: 3vw;
+      min-width: 100vw;
+      min-height: 80vw;
+    }
+  }
+  iframe {
+    max-width: 90vw;
+    display: block;
+    margin: 0 auto;
+    background-color: #777;
+  }
+
+  img{
+    max-width: 80vw;
+    margin: 0 auto;
+    display: block;
+    padding: 3vw;
+  }
+
+  embed{
+    max-width: 80vw;
+    margin: 0 auto;
+    display: block;
+    padding: 3vw;
+    min-width: 70vw;
+    min-height: 50vw;
+  }
+
+  .description{
+    font-size: 1.7rem;
+  }
+</style>
+
+<head>
+  <title>DataViz Personal Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="myFunction()">
+  <div
+    class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+    style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/70.jpg');"
+  >
+    <div class="container">
+      <br>
+      <h1 class="text-info">My DataViz journey</h1>
+      <br>
+      <h4 class="bg-info">This website is <mark>under construction</mark>.
+        I will be documenting my data visualization progress and journey here.</h4>
+    </div>
+    <hr class="horizontal_line">
+
+  </div>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+  <div class="container">
+    <button onclick="myFunction('correlation_graph')">Most Recent Work</button>
+    <h2>Progress Table</h2>
+    <p>This table documents the progress I have made and gives a quick overview of everything</p>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Project Title</th>
+          <th>Summary</th>
+          <th>Authors</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>03-12-2021</td>
+          <td>17vs78</td>
+          <td>17vs78 is a challenge for us to represent 17 and 78 in creative ways.
+            Techniques were encouraged to be creative and varied from pie charts to washers.</td>
+          <td>Dakota Chang, Hadrian Reppas, Darian Zhang, Nathan Xiong</td>
+        </tr>
+        <tr>
+          <td>04-12-2021</td>
+          <td><button onclick="myFunction('part-whole')">Part-to-Whole Comparison</button></td>
+          <td>Representing part-to-whole is the first task of a challenge. Challenges taken from the <a href='https://www.cedricscherer.com/2021/05/09/contributions-30daychartchallenge-2021/' target="_blank">30-day Chart Challenge</a>.</td>
+          <td>Dakota Chang</td>
+        </tr>
+        <tr>
+          <td>06-12-2021</td>
+          <td><button onclick="myFunction('notes')">Notes for Research Papers</button></td>
+          <td>These are some notes about the paper<a href="https://prism.ucalgary.ca/ds2/stream/?#/documents/10e163ca-b328-4294-97da-3f750890e719/page/1" target="_blank">
+            Considering Visual Variables as a Basis for Information Visualisation</a>.</td>
+          <td>Dakota Chang</td>
+        </tr>
+        <tr>
+          <td>07-12-2021</td>
+          <td><button onclick="myFunction('pictogram')">Pictograms</button></td>
+          <td>Utilising pictograms is the second task of a challenge. Challenges taken from the <a href='https://www.cedricscherer.com/2021/05/09/contributions-30daychartchallenge-2021/' target="_blank">30-day Chart Challenge</a>.</td>
+          <td>Dakota Chang</td>
+        </tr>
+        <tr>
+          <td>08-12-2021</td>
+          <td><button onclick="myFunction('Addison_Data')">Addison Gallery Data Visualisation</button></td>
+          <td>In this project, we explored and created a physical visualization of one part of the Addison Gallery datasets that fascinates us.</td>
+          <td>Dakota Chang, Sofia Marina</td>
+        </tr>
+        <tr>
+            <td>09-12-2021</td>
+            <td><button onclick="myFunction('pictogram1')">Pictograms (Version 2)</button></td>
+            <td>Utilising pictograms is the second task of a challenge. Challenges taken from the <a href='https://www.cedricscherer.com/2021/05/09/contributions-30daychartchallenge-2021/' target="_blank">30-day Chart Challenge</a>.</td>
+            <td>Dakota Chang</td>
+        </tr>
+        <tr>
+          <td>12-12-2021</td>
+          <td><button onclick="myFunction('control_chart')">Historical Graphs</button></td>
+          <td>Creating historical graphs is the third task of a challenge. Challenges taken from the <a href='https://www.cedricscherer.com/2021/05/09/contributions-30daychartchallenge-2021/' target="_blank">30-day Chart Challenge</a>.</td>
+          <td>Dakota Chang</td>
+        </tr>
+        <tr>
+          <td>16-12-2021</td>
+          <td><button onclick="myFunction('magical_graph')">Magical Graphs</button></td>
+          <td>Creating magical graphs is the fourth task of a challenge. Challenges taken from the <a href='https://www.cedricscherer.com/2021/05/09/contributions-30daychartchallenge-2021/' target="_blank">30-day Chart Challenge</a>.</td>
+          <td>Dakota Chang</td>
+        </tr>
+        <tr>
+          <td>09-01-2022</td>
+          <td><button onclick="myFunction('line_graph')">Line Graphs</button></td>
+          <td>Creating line graphs is the fifth task of a challenge. Challenges taken from the <a href='https://www.cedricscherer.com/2021/05/09/contributions-30daychartchallenge-2021/' target="_blank">30-day Chart Challenge</a>.</td>
+          <td>Dakota Chang</td>
+        </tr>
+        <tr>
+          <td>18-01-2022</td>
+          <td><button onclick="myFunction('physical_graph')">Distrubution Graphs: Physical</button></td>
+          <td>Creating physical distrubution graphs for is the seventh task of a challenge. Challenges taken from the <a href='https://www.cedricscherer.com/2021/05/09/contributions-30daychartchallenge-2021/' target="_blank">30-day Chart Challenge</a>.</td>
+          <td>Dakota Chang</td>
+        </tr>
+        <tr>
+          <td>20-01-2022</td>
+          <td><button onclick="myFunction('animal_graph')">Distrubution Graphs: Animals</button></td>
+          <td>Creating animal distrubution graphs for is the eighth task of a challenge. Challenges taken from the <a href='https://www.cedricscherer.com/2021/05/09/contributions-30daychartchallenge-2021/' target="_blank">30-day Chart Challenge</a>.</td>
+          <td>Dakota Chang</td>
+        </tr>
+        <tr>
+          <td>21-01-2022</td>
+          <td><button onclick="myFunction('statistics_graph')">Distrubution Graphs: Statistics</button></td>
+          <td>Creating statistical distrubution graphs for is the ninth task of a challenge. Challenges taken from the <a href='https://www.cedricscherer.com/2021/05/09/contributions-30daychartchallenge-2021/' target="_blank">30-day Chart Challenge</a>.</td>
+          <td>Dakota Chang</td>
+        </tr>
+        <tr>
+          <td>22-01-2022</td>
+          <td><button onclick="myFunction('abstract_graph')">Distrubution Graphs: Abstract</button>
+        <td>Creating abstract distrubution graphs for is the ninth task of a challenge. Challenges taken from the <a href='https://www.cedricscherer.com/2021/05/09/contributions-30daychartchallenge-2021/' target="_blank">30-day Chart Challenge</a>.</td>
+          <td>Dakota Chang</td>
+        </tr>
+        <tr>
+          <td>23-01-2022</td>
+          <td><button onclick="myFunction('circular_graph')">Distrubution Graphs: Circular</button>
+          <td>Creating statistical distrubution graphs for is the eleventh task of a challenge. Challenges taken from the <a href='https://www.cedricscherer.com/2021/05/09/contributions-30daychartchallenge-2021/' target="_blank">30-day Chart Challenge</a>.</td>
+          <td>Dakota Chang</td>
+        </tr>
+        <tr>s
+          <td>27-01-2022</td>
+          <td><button onclick="myFunction('strip_graph')">Distrubution Graphs: Strips</button>
+          <td>Creating distrubution strip graphs for is the twelve task of a challenge. Challenges taken from the <a href='https://www.cedricscherer.com/2021/05/09/contributions-30daychartchallenge-2021/' target="_blank">30-day Chart Challenge</a>.</td>
+          <td>Dakota Chang</td>
+        </tr>
+        <tr>
+          <td>28-01-2022</td>
+          <td><button onclick="myFunction('network_graph')">Network Chart - Marvel Edition</button>
+          <td>Creating a network chart is a part of an assignment. Here I used a marvel heros and comics dataset to display the pros and cons of network charts.</td>
+          <td>Dakota Chang</td>
+        </tr>
+        <tr>
+          <td>01-02-2022</td>
+          <td><button onclick="myFunction('correlation_graph')">Relationship Graphs: Correlation</button>
+          <td>Creating relationship correlation graphs for is the thirteenth task of a challenge. Challenges taken from the <a href='https://www.cedricscherer.com/2021/05/09/contributions-30daychartchallenge-2021/' target="_blank">30-day Chart Challenge</a>.</td>
+          <td>Dakota Chang</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class='part-whole' id="part-whole">
+    <hr class="horizontal_line">
+    <div class="container">
+      <h2 class="text-success">1. Day1: Part-to-Whole Graph</h2>
+      <iframe width="600" height="371" seamless frameborder="0" scrolling="yes" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRSzXhSqn8eDT_KsPKi1R33QyfNjQj8qJFgb2eQibjlKIMINs3EgVaWK1FRc8UxQ3sS7g8s69YOS07s/pubchart?oid=658769951&amp;format=interactive"></iframe>
+      <p class="text-muted"> This chart is made by Dakota with Google Sheets, source of statistics is <a href="https://www.espn.com/soccer/match/_/gameId/605907" target="_blank">ESPN</a>.</p>
+      <p class="text-info description"> When it comes to part-to-whole comparisons, people often think of pie charts or donut charts.
+        However, while watching this football match, I realised sports statistics often use 100% stacked bar charts, which is a form of part-to-whole comparison charts,
+         so I decided to make one and demonstrate a real-life usage of these charts.</p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <hr class="horizontal_line">
+  <div class='notes' id="notes">
+    <div class="container">
+      <h2 class="text-success">Notes to Research Paper:
+        <a href="https://prism.ucalgary.ca/ds2/stream/?#/documents/10e163ca-b328-4294-97da-3f750890e719/page/1" target="_blank">
+          Considering Visual Variables as a Basis for Information Visualisation</a></h2>
+      <iframe src="https://drive.google.com/file/d/1HKlCrghIW43FVzn6m3jq2uWuN07CeZuB/preview" width="640" height="480"></iframe>
+      <p class="text-muted"> These notes are made by Dakota and hosted through Google Drive.</p>
+      <p class="text-info description"> Here are some quick notes I took while reading the paper. I thought
+      the paper was very informative and fun to read, partially thanks to the great examples and graphs/tables that demonstrate its main points.</p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <hr class="horizontal_line">
+  <div class = "pictogram" id="pictogram">
+    <div class="container">
+      <h2 class="text-success">2. Pictograms</h2>
+      <img src='img/UCL_WinsByCountries.png'>
+      <p class="text-muted"> Made with PyWaffle (<a href="https://github.com/dcoder0111/dcoder0111PythonTrack/blob/main/examples/UCL.ipynb" target="_blank">code</a>),
+        source from <a href="https://www.kaggle.com/johnharshith/uefa-champions-league-quarter-finals-since-1980" target="_blank">Kaggle</a>.</p>
+      <p class="text-info description"> Sticking to the football theme, I looked at countries where winning teams of UCL is from and graphed it for my pictogram challenge.
+        Colors inspired by respective countries's football kit.</p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <hr class="horizontal_line">
+  <div class = "Addison_Data" id="Addison_Data">
+    <div class="container">
+      <h2 class="text-success">Addison Gallery Data</h2>
+      <img src='img/addison_data_example.png'>
+      <!-- <img src='img/addison_data_example.png'> -->
+      <p class="text-muted"> Made with PyWaffle (<a href="https://github.com/dcoder0111/dcoder0111PythonTrack/blob/main/examples/AddisonData.ipynb" target="_blank">code</a>),
+        source from <a href="http://accessaddison.andover.edu/" target="_blank">Addison Gallery of American Art</a>.</p>
+      <p class="text-info description"> description to be uploaded</p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <hr class="horizontal_line">
+  <div class = "pictogram1" id="pictogram1">
+    <div class="container">
+      <h2 class="text-success">2b. Pictograms</h2>
+      <img src='img/news_pictogram.png'>
+      <p class="text-muted"> Made with PyWaffle (<a href="https://github.com/dcoder0111/dcoder0111PythonTrack/blob/main/examples/News_pictograms.ipynb" target="_blank">code</a>),
+        source from <a href="https://www.kaggle.com/rmisra/news-category-dataset" target="_blank">Kaggle</a>.</p>
+      <p class="text-info description"> Using the Huffpost dataset from Kaggle, I used PyWaffle to display the major categories covered in news over the past 10 years.</p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <hr class="horizontal_line">
+  <div class = "control_chart" id="control_chart">
+    <div class="container">
+      <h2 class="text-success">3. Historical Graphs</h2>
+      <img src='img/control_chart.png'>
+      <p class="text-muted"> Hand Drawn with Notability. <a href="https://deming.org/the-first-control-chart/" target="_blank">Source</a> for reference.</p>
+      <p class="text-info description">I have always been a huge fan of quality control, and in this challenge, I recreated the first control chart to ever be made. The original version was created by Walter Andrew Shewhart, an American physicist, engineer and statistician, sometimes known as the father of statistical quality control and also related to the Shewhart cycle. His work is inspired by William Edwards Deming.</p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <hr class="horizontal_line">
+  <div class = "magical_graph" id="magical_graph">
+    <div class="container">
+      <h2 class="text-success">4. Magical Graphs</h2>
+      <img src='img/magic.png'>
+      <p class="text-muted"> Made using matplotlib (<a href="https://deming.org/the-first-control-chart/" target="_blank">code</a>) for reference.</p>
+      <p class="text-info description">I used a movie dataset and checked out how many movies there are that relates to magic.</p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <hr class="horizontal_line">
+  <div class = "line_graph" id="line_graph">
+    <div class="container">
+      <h2 class="text-success">5. Line Graphs</h2>
+      <embed type="text/html" src="lineGraph.html">
+      <p class="text-muted"> Made using plotly and YouTube API. <a href='https://github.com/dcoder0111/dcoder0111sPythonTrack/blob/main/youtube.ipynb' target='_blank'>Code</a> linked  for reference.</p>
+      <p class="text-info description">I got the chanelId of the biggest Tech YouTubers and analysed their videos using the YouTube API. This is the views to like ratio of their videos. More information to be found in the code.</p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <hr class="horizontal_line">
+  <div class = "experimental_graph" id="experimental_graph">
+    <div class="container">
+      <h2 class="text-success">6. Experimental Graphs</h2>
+      <img src='img/wordcloud.png'>
+      <p class="text-muted"> Made using wordcloud. (<a href="" target="_blank">Code</a>) linked for reference.</p>
+      <p class="text-info description">This is a continuation of the line graph project. These are the most commonly seen words in their recent videos. More information to be found in the code.</p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <hr class="horizontal_line">
+  <div class = "distrubution_graph" id="physical_graph">
+    <div class="container">
+      <h2 class="text-success">7. Distrubution Graphs - Physical</h2>
+      <div class="flourish-embed flourish-sports" data-src="visualisation/8541948"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+      <p class="text-muted"> Made using Flourish.</p>
+      <p class="text-info description">I decided to make a chart using Flourish
+        and elected to use the data from the summer Olympics game of the Women's 100m freestyle.
+        The race was chosen due to its cultural significance in Hong Kong.
+      </p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <hr class="horizontal_line">
+  <div class = "distrubution_graph" id="animal_graph">
+    <div class="container">
+      <h2 class="text-success">8. Distrubution Graphs - Animals</h2>
+      <embed type="text/html" src="eggData.html">
+      <p class="text-muted"> Made using plotly. (<a href="" target="_blank">Code</a>) linked for reference.</p>
+      <p class="text-info description">This chart contains data about egg production across different countries. Source of data cited in code.</p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <hr class="horizontal_line">
+  <div class = "distrubution_graph" id="statistics_graph">
+    <div class="container">
+      <h2 class="text-success">9. Distrubution Graphs - Statistics</h2>
+      <div class="flourish-embed flourish-chart" data-src="visualisation/8542136"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+      <p class="text-muted"> Made using Flourish.</p>
+      <p class="text-info description"> I used Flourish again and created a video chart with soccer statistics.
+      </p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <hr class="horizontal_line">
+  <div class = "distrubution_graph" id="abstract_graph">
+    <div class="container">
+      <h2 class="text-success">10. Distrubution Graphs - Abstract</h2>
+      <div class="flourish-embed flourish-chart" data-src="visualisation/8544663"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+      <p class="text-muted"> Made using Altair. (<a href="https://github.com/dcoder0111/dcoder0111.github.io/blob/main/code/Distrubution_Circle.ipynb" target="_blank">Code</a>) linked for reference.</p>
+      <p class="text-info description"> I made up hours spent on each classs I am taking this term and created a donut chart with Altair.
+      </p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <hr class="horizontal_line">
+  <div class = "distrubution_graph" id="circular_graph">
+    <div class="container">
+      <h2 class="text-success">11. Distrubution Graphs - Circular</h2>
+      <img src='img/donut_chart_classes.svg'></img>
+      <p class="text-muted"> Made using Altair. (<a href="https://github.com/dcoder0111/dcoder0111.github.io/blob/main/code/Distrubution_Circle.ipynb" target="_blank">Code</a>) linked for reference.</p>
+      <p class="text-info description"> I made up hours spent on each classs I am taking this term and created a donut chart with Altair.
+      </p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <hr class="horizontal_line">
+  <div class = "distrubution_graph" id="strip_graph">
+    <div class="container">
+      <h2 class="text-success">12. Distrubution Graphs - Strip</h2>
+      <embed type="text/html" src="img/strip_dis.html">
+      <p class="text-muted"> Made using Altair. (<a href="" target="_blank">Code</a>) linked for reference.</p>
+      <p class="text-info description"> I used the classic Titanic Dataset and created an interactive chart using Altair.
+      </p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <hr class="horizontal_line">
+  <div class = "network_graph" id="network_graph">
+    <div class="container">
+      <h2 class="text-success">Network Graphs - Famous Marvel Heros and Comic Issues</h2>
+      <div><a href='//sketchviz.com/@dcoder0111/14aaeb2b0b6818c29c5e4d6d1a4e26dd'><img src='https://sketchviz.com/@dcoder0111/14aaeb2b0b6818c29c5e4d6d1a4e26dd/1f9ed2f1d9b2a56bbb309c2673f7c6e663322131.sketchy.png' style='max-width: 100%;'></a><br/><span style='font-size: 80%;color:#555;'>Hosted on <a href='//sketchviz.com/' style='color:#555;'>Sketchviz</a></span></div>
+      <p class="text-muted"> Made using GraphViz. (<a href="https://github.com/dcoder0111/dcoder0111.github.io/blob/main/code/Marvel.ipynb" target="_blank">Data cleaning code</a>) linked for reference.</p>
+      <p class="text-info description"> I used a dataset from kaggle and the SketchViz library to create a network graph of the most commonly appearing heros and some classic comic issues they starred in.
+      </p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <hr class="horizontal_line">
+  <div class = "choropleth" id="correlation_graph">
+    <div class="container">
+      <h2 class="text-success">13. Relationship Graphs - Correlation</h2>
+      <img src='img/faang_v2.gif'></img>
+      <p class="text-muted"> Made using ggplot2. <a href="https://github.com/dcoder0111/dcoder0111.github.io/blob/main/code/R_Trial.R" target="_blank">Code for graph</a>  and <a href="https://github.com/dcoder0111/dcoder0111.github.io/blob/main/code/FAANG_CLEANING.ipynb" target="_blank">data cleaning code</a> and linked for reference.</p>
+      <p class="text-info description">
+        I got stock prices data of FAANG company in 2019 from a dataset from
+        Kaggle and graphed an animated plot using R and ggplot2 to see the correlation
+        between stock prices of the biggest tech companies.
+      </p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+  </div>
+</body>
+
+</html>
+<script>
+  function myFunction(element) {
+    var elmnt = document.getElementById(element);
+    elmnt.scrollIntoView();
+  }
+  //Get the button:
+  mybutton = document.getElementById("myBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+</script>
