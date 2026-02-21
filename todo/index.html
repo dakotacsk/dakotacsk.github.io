@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bloom Todo</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="todo-side" aria-label="Todo list">
+        <form id="todo-form" autocomplete="off">
+          <label class="sr-only" for="todo-input">Add a todo</label>
+          <input
+            id="todo-input"
+            name="todo"
+            type="text"
+            maxlength="160"
+            placeholder="Type a task and press Enter"
+            required
+          />
+        </form>
+        <ul id="todo-list" aria-live="polite"></ul>
+      </section>
+
+      <section class="flower-side" aria-label="Lily video">
+        <video
+          id="lily-video"
+          src="./lily_growing.mp4"
+          preload="metadata"
+          muted
+          playsinline
+          autoplay
+        ></video>
+      </section>
+    </main>
+  </body>
+</html>
