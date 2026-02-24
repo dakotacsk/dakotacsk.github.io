@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clickable Journal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="cutouts-grid" aria-label="Clickable cutouts">
+      <button
+        class="cutout civics"
+        type="button"
+        data-topic="civics"
+        aria-label="Civics / Journalism"
+      ></button>
+      <button
+        class="cutout skating"
+        type="button"
+        data-topic="skating"
+        aria-label="Skating"
+      ></button>
+      <button
+        class="cutout music"
+        type="button"
+        data-topic="music"
+        aria-label="Music"
+      ></button>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal__overlay" data-close="true"></div>
+
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button
+          class="modal__close"
+          type="button"
+          aria-label="Close"
+          data-close="true"
+        >
+          ✕
+        </button>
+
+        <header class="journal__header">
+          <div class="journal__kicker" id="modal-kicker">Entry</div>
+          <h2 class="journal__title" id="modal-title">Title</h2>
+          <div class="journal__meta" id="modal-meta">
+            Feb 23 • Placeholder location
+          </div>
+        </header>
+
+        <section class="journal__grid" id="modal-content">
+          <!-- injected by JS -->
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

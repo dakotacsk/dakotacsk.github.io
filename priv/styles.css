@@ -1,0 +1,256 @@
+/* 1) Custom font */
+@font-face {
+  font-family: "Trial";
+  src: url("assets/Trial.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+  --paper: #fbf6ea;
+  --ink: #1e1e1e;
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  color: var(--ink);
+  background-image: url("assets/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+/* Horizontal scroll row: scroll down → scrolls horizontally */
+.cutouts-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  height: 100vh;
+  padding: 0 64px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Cutouts: fixed-size cells in the row, extra side padding via first/last child */
+.cutout {
+  flex: 0 0 auto;
+  width: min(380px, 78vw);
+  height: min(70vh, 520px);
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  scroll-snap-align: center;
+
+  filter: grayscale(100%) brightness(0.82);
+  transition:
+    filter 180ms ease,
+    transform 180ms ease;
+}
+.cutout:hover,
+.cutout:focus-visible {
+  filter: grayscale(0%) brightness(1);
+  transform: translateY(-2px) scale(1.01);
+  outline: none;
+}
+.cutout:first-child {
+  margin-left: 24px;
+}
+.cutout:last-child {
+  margin-right: 24px;
+}
+
+/* Stagger cutouts on wide screens - organic, scattered placement like on a table */
+@media (min-width: 960px) {
+  .cutout:nth-child(1) {
+    align-self: flex-start;
+    margin-top: 24px;
+    margin-right: 12px;
+    transform: rotate(5deg) scale(0.94);
+  }
+  .cutout:nth-child(2) {
+    align-self: flex-end;
+    margin-bottom: 72px;
+    margin-left: 8px;
+    margin-right: 28px;
+    transform: rotate(-6deg) scale(1.05);
+  }
+  .cutout:nth-child(3) {
+    align-self: flex-start;
+    margin-top: 88px;
+    margin-left: 16px;
+    transform: rotate(-3deg) scale(0.92);
+  }
+}
+
+.civics {
+  background-image: url("assets/civics.png");
+}
+.skating {
+  background-image: url("assets/skating.png");
+}
+.music {
+  background-image: url("assets/music.png");
+}
+
+/* 2) Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+}
+.modal.is-open {
+  display: block;
+}
+
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.modal__dialog {
+  position: relative;
+  width: min(980px, 94vw);
+  max-height: min(86vh, 900px);
+  overflow: auto;
+  margin: 7vh auto;
+  border-radius: 18px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  padding: 24px 28px 32px;
+  /* Bullet journal dot grid */
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.12) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0;
+}
+
+.modal__close {
+  position: sticky;
+  top: 10px;
+  float: right;
+  border: 0;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 999px;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
+
+/* 3) Journal styling */
+.journal__header {
+  padding: 6px 6px 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  margin-bottom: 16px;
+}
+
+.journal__kicker {
+  font:
+    12px/1.2 system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.journal__title {
+  margin: 6px 0 2px;
+  font-family: "Trial", ui-serif, Georgia, serif;
+  font-size: 34px;
+  letter-spacing: 0.01em;
+}
+
+.journal__meta {
+  font:
+    13px/1.2 system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  opacity: 0.7;
+}
+
+/* two-column “journal page” */
+.journal__grid {
+  display: block;
+  padding: 0 4px;
+}
+
+.journal__prose {
+  font-family: "Trial", ui-serif, Georgia, serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin-bottom: 1.25em;
+}
+
+.journal__prose:last-child {
+  margin-bottom: 0;
+}
+
+.journal__prose p {
+  margin: 0 0 0.75em;
+}
+
+.journal__prose p:last-child {
+  margin-bottom: 0;
+}
+
+.journal__prose strong {
+  font-weight: 600;
+}
+
+.journal__figure {
+  margin: 1.25em 0;
+  max-width: 100%;
+}
+
+.journal__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.journal__caption {
+  margin-top: 6px;
+  font:
+    13px/1.4 system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  color: var(--ink);
+  opacity: 0.75;
+}
+
+/* responsive: stack on mobile */
+@media (max-width: 760px) {
+  .journal__title {
+    font-size: 28px;
+  }
+}
