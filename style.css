@@ -810,6 +810,20 @@ p.handwriting-note {
   border-color: rgba(96, 119, 68, 0.22);
 }
 
+.glass-card.reveal-card {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.glass-card.reveal-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glass-card.reveal-card.is-visible:hover {
+  transform: translateY(-12px);
+}
+
 /* Large glass card */
 .glass-card-lg {
   grid-column: span 2;
@@ -911,6 +925,18 @@ p.handwriting-note {
   opacity: 1;
   filter: saturate(0.9) contrast(1.08);
   overflow: hidden;
+}
+
+.shader-project-bg {
+  display: grid;
+  place-items: stretch;
+}
+
+.shader-project-bg canvas,
+.shader-project-bg svg,
+.shader-project-bg > * {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .water-project .featured-project-bg::before,

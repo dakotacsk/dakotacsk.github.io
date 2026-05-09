@@ -1,4 +1,5 @@
-**Skydiving and Singularity**
+![A person jumping out of a plane with a parachute](img/skydiving.jpg)
+*The exact moment I realised I'll be jumping out of a plane during my first ever sky dive.*
 
 As you fall out of the sky, you realise have two options: 
 
@@ -38,6 +39,10 @@ We were single-minded. Everyone in that booth had decided, whether consciously o
 I think about that night a lot, because it felt similar to skydiving in a way I did not expect.
 
 Not because of the intensity, but because of the singularity.
+
+![A sketch of the polished prototype compared to the scrappy prototype](img/me_jumping.jpg)
+*My tandem instructor and I free falling in my first ever skydive.*
+
 
 In skydiving, you do not get to divide your attention. Your body forces you into one path. Once you understand what it feels like to have all of your focus aligned toward a single outcome, it is very hard to ignore how scattered everything else feels.
 
