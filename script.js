@@ -140,7 +140,8 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".glass-card").forEach((card) => {
   card.style.opacity = "0";
   card.style.transform = "translateY(20px)";
-  card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+  card.style.transition =
+    "opacity 0.6s ease, transform 0.55s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.45s ease, border-color 0.45s ease, box-shadow 0.45s ease";
   observer.observe(card);
 });
 

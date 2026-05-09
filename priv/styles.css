@@ -136,7 +136,11 @@ body {
   box-shadow: var(--shadow);
   padding: 24px 28px 32px;
   /* Bullet journal dot grid */
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.12) 1px, transparent 1px);
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.12) 1px,
+    transparent 1px
+  );
   background-size: 20px 20px;
   background-position: 0 0;
 }
@@ -199,7 +203,7 @@ body {
 
 .journal__prose {
   font-family: "Trial", ui-serif, Georgia, serif;
-  font-size: 18px;
+  font-size: 30px;
   line-height: 1.6;
   color: var(--ink);
   margin-bottom: 1.25em;
@@ -222,23 +226,26 @@ body {
 }
 
 .journal__figure {
-  margin: 1.25em 0;
-  max-width: 100%;
+  margin: 2.5em auto;
+  max-width: min(20px, 48%);
+  padding: 0 1.5em;
 }
 
 .journal__img {
   display: block;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .journal__caption {
-  margin-top: 6px;
+  margin-top: 8px;
+  padding: 0 4px;
   font:
-    13px/1.4 system-ui,
+    12px/1.4 system-ui,
     -apple-system,
     Segoe UI,
     Roboto,

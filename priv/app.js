@@ -82,10 +82,18 @@ function openModal(topicKey) {
     } else {
       const figure = document.createElement("figure");
       figure.className = "journal__figure";
-      figure.innerHTML = `
-        <img class="journal__img" src="${b.src}" alt="${b.caption.replace(/"/g, "&quot;")}" loading="lazy" />
-        <figcaption class="journal__caption">${b.caption}</figcaption>
-      `;
+      figure.style.cssText = "margin: 2.5em auto; max-width: 240px; padding: 0 1.5em;";
+      const img = document.createElement("img");
+      img.className = "journal__img";
+      img.src = b.src;
+      img.alt = b.caption;
+      img.loading = "lazy";
+      img.style.cssText = "display: block; width: 100%; max-height: 200px; object-fit: contain;";
+      const cap = document.createElement("figcaption");
+      cap.className = "journal__caption";
+      cap.textContent = b.caption;
+      figure.appendChild(img);
+      figure.appendChild(cap);
       modalContent.appendChild(figure);
     }
   });

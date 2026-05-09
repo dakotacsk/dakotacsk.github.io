@@ -1,5 +1,13 @@
 [
   {
+    "id": "skydiving",
+    "title": "Skydiving and Singularity",
+    "date": "2026-05-05",
+    "tags": ["Life"],
+    "excerpt": "A reflection on my experience skydiving and mindfulness.",
+    "file": "skydiving.md"
+  },
+  {
     "id": "globally-local",
     "title": "Globally Local: A Reflection on Local Democracy",
     "date": "2026-02-10",
