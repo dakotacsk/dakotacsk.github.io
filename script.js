@@ -128,20 +128,15 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, index) => {
     if (entry.isIntersecting) {
       setTimeout(() => {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
+        entry.target.classList.add("is-visible");
       }, index * 80);
       observer.unobserve(entry.target);
     }
   });
 }, observerOptions);
 
-// Observe all glass cards
 document.querySelectorAll(".glass-card").forEach((card) => {
-  card.style.opacity = "0";
-  card.style.transform = "translateY(20px)";
-  card.style.transition =
-    "opacity 0.6s ease, transform 0.55s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.45s ease, border-color 0.45s ease, box-shadow 0.45s ease";
+  card.classList.add("reveal-card");
   observer.observe(card);
 });
 
