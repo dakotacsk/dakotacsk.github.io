@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A cinematic alternative personal website: private screening room, color-graded stills, wall rituals, corner-store scenes, letters, and field notes."
+    />
+    <title>Alternative Dakota</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="grade-neon">
+    <header class="site-header">
+      <a class="brand" href="#screening" data-route="screening" aria-label="alternative dakota home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>alternative dakota</span>
+      </a>
+
+      <nav class="nav-tabs" aria-label="Rooms">
+        <button class="nav-tab active" type="button" data-route="screening">screening</button>
+        <button class="nav-tab" type="button" data-route="stills">stills</button>
+        <button class="nav-tab" type="button" data-route="wall">wall</button>
+        <button class="nav-tab" type="button" data-route="store">store</button>
+        <button class="nav-tab" type="button" data-route="letters">letters</button>
+        <button class="nav-tab" type="button" data-route="notes">notes</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="view active" id="view-screening" aria-labelledby="screening-title">
+        <section class="screening-room" aria-label="Private screening room">
+          <img class="hero-still" id="hero-still" src="../archive/img/me_at_urban.jpeg" alt="Cinematic still" />
+          <div class="frame-vignette" aria-hidden="true"></div>
+          <div class="film-rail rail-left" aria-hidden="true"></div>
+          <div class="film-rail rail-right" aria-hidden="true"></div>
+
+          <div class="screening-copy">
+            <p class="eyebrow" id="scene-kicker">scene 01 / convenience green</p>
+            <h1 id="screening-title">i want this to feel like a color graded slide left open in a dark room.</h1>
+            <p id="scene-copy">
+              i love when one image does the whole thing. no overexplaining. just a frame that makes you feel like
+              maybe your life was already cinematic and you were too busy coding to notice.
+            </p>
+          </div>
+
+          <aside class="projection-panel" aria-label="Projection controls">
+            <div>
+              <span class="panel-label">now screening</span>
+              <strong id="scene-title">convenience green</strong>
+            </div>
+            <div class="projection-meter" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="button-row">
+              <button class="command-button" id="previous-scene" type="button">previous</button>
+              <button class="command-button primary" id="next-scene" type="button">next frame</button>
+            </div>
+            <button class="command-button wide" id="idle-toggle" type="button">start idling track</button>
+          </aside>
+        </section>
+
+        <section class="film-console" aria-label="Film controls">
+          <div class="filmstrip" id="filmstrip"></div>
+
+          <aside class="grade-console" aria-labelledby="grade-title">
+            <div>
+              <p class="eyebrow">glasses case</p>
+              <h2 id="grade-title">let me see the world in a different grade for a second.</h2>
+            </div>
+            <div class="grade-buttons" id="grade-buttons"></div>
+            <label class="range-label" for="grain-range">grain</label>
+            <input id="grain-range" type="range" min="0" max="70" value="22" />
+            <label class="range-label" for="light-range">light leak</label>
+            <input id="light-range" type="range" min="0" max="100" value="35" />
+          </aside>
+        </section>
+      </section>
+
+      <section class="view" id="view-stills" aria-labelledby="stills-title">
+        <div class="page-intro">
+          <p class="eyebrow">slides / one image is enough</p>
+          <h1 id="stills-title">i love slides that are just one really good image.</h1>
+          <p>
+            it tells a story without trying to sound smart about it. click one and it goes back into the projector.
+          </p>
+        </div>
+        <section class="still-grid" id="still-grid" aria-label="Cinematic stills"></section>
+      </section>
+
+      <section class="view" id="view-wall" aria-labelledby="wall-title">
+        <section class="long-take-wall">
+          <div class="wall-copy">
+            <p class="eyebrow">long take / nothing happens</p>
+            <h1 id="wall-title">maybe someday my website is just a wall.</h1>
+            <p>
+              nothing happens. newsflash, nothing is going to happen. but you can stare at it and imagine something
+              happening in front of it, which is sometimes better.
+            </p>
+          </div>
+
+          <div class="blank-screen" id="blank-screen" aria-label="Blank wall">
+            <div class="wall-light"></div>
+            <div class="wall-notes" id="wall-notes"></div>
+            <div class="snow-caption" id="snow-caption">
+              <span>polar bear</span>
+              <span>snowfield</span>
+              <span>snowflakes</span>
+            </div>
+          </div>
+
+          <aside class="ritual-panel">
+            <label class="range-label" for="wall-input">trace on the wall</label>
+            <textarea id="wall-input" maxlength="120" placeholder="sometimes silence and staring at a wall is necessary"></textarea>
+            <div class="button-row">
+              <button class="command-button primary" id="pin-note" type="button">pin trace</button>
+              <button class="command-button" id="clear-wall" type="button">clear</button>
+            </div>
+            <div class="stare-time">
+              <span>stare time</span>
+              <strong id="stare-time">00:00</strong>
+            <button class="command-button" id="stare-toggle" type="button">start</button>
+          </div>
+            <button class="text-command" id="snow-toggle" type="button">reveal the blank drawing</button>
+          </aside>
+        </section>
+      </section>
+
+      <section class="view" id="view-store" aria-labelledby="store-title">
+        <div class="page-intro">
+          <p class="eyebrow">corner-store scene study</p>
+          <h1 id="store-title">i miss the 7-eleven downstairs.</h1>
+          <p>
+            the plastic coated coupons felt fancy for no reason. the milk cartons. the glass bottles. going into a
+            random convenience store and learning what people within two miles are quietly enjoying.
+          </p>
+        </div>
+
+        <section class="store-scene">
+          <div class="store-window">
+            <div class="store-sign">OPEN ALL NIGHT</div>
+            <div class="shelf-row" id="shelf-row"></div>
+          </div>
+
+          <aside class="receipt-panel">
+            <h2>receipt from a two-mile radius</h2>
+            <div class="receipt-list" id="receipt-list"></div>
+            <div class="receipt-total">
+              <span>total</span>
+              <strong id="receipt-total">$0.00</strong>
+            </div>
+            <button class="command-button primary wide" id="print-coupon" type="button">print coupon</button>
+            <div class="coupon-output" id="coupon-output">
+              <span>coupon</span>
+              <strong>5% off nostalgic milk</strong>
+              <small>valid when the errand randomly means something</small>
+            </div>
+          </aside>
+        </section>
+      </section>
+
+      <section class="view" id="view-letters" aria-labelledby="letters-title">
+        <div class="page-intro">
+          <p class="eyebrow">voiceover / one person protocol</p>
+          <h1 id="letters-title">i miss paper cups with a string between them.</h1>
+          <p>
+            it was so intimate and so fun and so crafty. no feed, no audience, just one person and one line.
+          </p>
+        </div>
+
+        <section class="letter-stage">
+          <div class="string-phone" aria-label="Paper cup string phone">
+            <div class="paper-cup">cup A</div>
+            <div class="string-line"><span id="traveling-message"></span></div>
+            <div class="paper-cup">cup B</div>
+          </div>
+
+          <aside class="letter-desk">
+            <label class="range-label" for="letter-to">to</label>
+            <input id="letter-to" type="text" maxlength="30" placeholder="someone specific" />
+            <label class="range-label" for="letter-body">message</label>
+            <textarea
+              id="letter-body"
+              maxlength="240"
+              placeholder="tell them you love them all the time, but mean it"
+            ></textarea>
+            <div class="button-row">
+              <button class="command-button primary" id="send-letter" type="button">send</button>
+              <button class="command-button" id="clear-letters" type="button">clear</button>
+            </div>
+          </aside>
+        </section>
+
+        <section class="mail-bin" id="mail-bin" aria-label="Saved letters"></section>
+      </section>
+
+      <section class="view" id="view-notes" aria-labelledby="notes-title">
+        <div class="page-intro">
+          <p class="eyebrow">notes after the credits</p>
+          <h1 id="notes-title">things i keep thinking about even when i'm supposed to be doing something else.</h1>
+          <p>
+            not a resume. not trying to impress anyone. just the voiceover track because i spend most of my day coding
+            but i care way more about how everything feels.
+          </p>
+        </div>
+
+        <section class="notes-grid" id="notes-grid"></section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

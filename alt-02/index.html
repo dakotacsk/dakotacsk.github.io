@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A personal stream-of-consciousness web app: a wall, cinema room, corner store, paper-cup mail desk, field notes, and small tools for seeing the world in color grades."
+    />
+    <title>Stream of Consciousness</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="grade-cinema" data-route="home">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="light-leak" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Stream of Consciousness home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>stream of consciousness</span>
+      </a>
+
+      <nav class="route-nav" aria-label="Rooms">
+        <a href="#home" data-route-link="home">home</a>
+        <a href="#wall" data-route-link="wall">wall</a>
+        <a href="#cinema" data-route-link="cinema">cinema</a>
+        <a href="#store" data-route-link="store">store</a>
+        <a href="#mail" data-route-link="mail">mail</a>
+        <a href="#fieldbook" data-route-link="fieldbook">fieldbook</a>
+      </nav>
+
+      <div class="grade-picker" aria-label="Color grade">
+        <button type="button" data-grade="grade-cinema">neon rain</button>
+        <button type="button" data-grade="grade-clouds">missed clouds</button>
+        <button type="button" data-grade="grade-milk">milk carton</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="view active" id="route-home" aria-labelledby="home-title">
+        <section class="hero">
+          <img
+            src="../blogs/img/skydiving.jpg"
+            alt="A cinematic fall through open sky"
+            class="hero-image"
+          />
+          <div class="hero-vignette" aria-hidden="true"></div>
+          <div class="hero-copy">
+            <p class="eyebrow">private website / no feed</p>
+            <h1 id="home-title">stream of consciousness</h1>
+            <p>
+              a room for solid colors, idling cars, blank walls, paper cups,
+              color-graded frames, convenience stores, and thoughts that got
+              more honest the further down the page they appeared.
+            </p>
+          </div>
+          <aside class="hero-console" aria-label="Current thought">
+            <span>current reel</span>
+            <strong id="current-reel-title">the wall waits better than a feed</strong>
+            <p id="current-reel-copy">
+              sometimes silence and staring at a wall is necessary.
+            </p>
+            <button class="command primary" id="shuffle-reel" type="button">
+              next thought
+            </button>
+          </aside>
+        </section>
+
+        <section class="home-grid" aria-label="Rooms in this site">
+          <a class="room-tile tile-wall" href="#wall">
+            <span>01</span>
+            <h2>the wall</h2>
+            <p>nothing happens, and the emptiness is the point.</p>
+          </a>
+          <a class="room-tile tile-cinema" href="#cinema">
+            <span>02</span>
+            <h2>color-grade glasses</h2>
+            <p>slides that trust one image to carry the whole story.</p>
+          </a>
+          <a class="room-tile tile-store" href="#store">
+            <span>03</span>
+            <h2>corner-store anthropology</h2>
+            <p>coupons, milk cartons, mac salad, and a two-mile radius.</p>
+          </a>
+          <a class="room-tile tile-mail" href="#mail">
+            <span>04</span>
+            <h2>paper-cup mail</h2>
+            <p>one string, one person, one line that actually means something.</p>
+          </a>
+          <a class="room-tile tile-fieldbook" href="#fieldbook">
+            <span>05</span>
+            <h2>fieldbook</h2>
+            <p>love, taste, customers, iteration, and not trying to impress.</p>
+          </a>
+        </section>
+      </section>
+
+      <section class="view" id="route-wall" aria-labelledby="wall-title">
+        <section class="wall-room">
+          <div class="room-copy">
+            <p class="eyebrow">long take / blank page</p>
+            <h1 id="wall-title">maybe someday the website is just a wall.</h1>
+            <p>
+              a polar bear in a snowfield, looking at snowflakes. the drawing
+              is blank because the imagination is doing the labor.
+            </p>
+          </div>
+
+          <div class="wall-stage" id="wall-stage" aria-label="Blank wall">
+            <div class="crosswalk" aria-hidden="true">
+              <div class="walker"></div>
+            </div>
+            <div class="wall-note-layer" id="wall-note-layer"></div>
+            <div class="polar-caption" id="polar-caption">
+              polar bear / snowfield / snowflakes
+            </div>
+          </div>
+
+          <aside class="tool-panel">
+            <label for="wall-note">trace</label>
+            <textarea
+              id="wall-note"
+              maxlength="150"
+              placeholder="write almost nothing"
+            ></textarea>
+            <div class="button-row">
+              <button class="command primary" id="pin-wall-note" type="button">
+                pin trace
+              </button>
+              <button class="command" id="clear-wall" type="button">clear</button>
+            </div>
+            <div class="meter-row">
+              <span>stare time</span>
+              <strong id="stare-clock">00:00</strong>
+              <button class="command compact" id="stare-toggle" type="button">
+                start
+              </button>
+            </div>
+            <button class="quiet-command" id="blank-toggle" type="button">
+              show the blank drawing
+            </button>
+          </aside>
+        </section>
+      </section>
+
+      <section class="view" id="route-cinema" aria-labelledby="cinema-title">
+        <section class="cinema-room">
+          <div class="projector">
+            <img
+              id="projector-image"
+              src="../blogs/img/me_jumping.jpg"
+              alt="A cinematic still chosen from the archive"
+            />
+            <div class="projector-overlay" aria-hidden="true"></div>
+            <div class="subtitle-card">
+              <span id="scene-kicker">scene 01</span>
+              <h1 id="cinema-title">color-grade glasses</h1>
+              <p id="scene-copy">
+                if the world had swappable filters, maybe more people would
+                notice that they already live inside frames.
+              </p>
+            </div>
+          </div>
+
+          <aside class="projection-desk">
+            <div>
+              <p class="eyebrow">one-image slides</p>
+              <h2 id="scene-title">no hands</h2>
+            </div>
+            <div class="button-row">
+              <button class="command" id="prev-scene" type="button">prev</button>
+              <button class="command primary" id="next-scene" type="button">
+                next frame
+              </button>
+            </div>
+            <label for="grain-range">grain</label>
+            <input id="grain-range" type="range" min="0" max="70" value="22" />
+            <label for="leak-range">light leak</label>
+            <input id="leak-range" type="range" min="0" max="100" value="36" />
+            <button class="command" id="idle-sound" type="button">
+              start idling track
+            </button>
+          </aside>
+        </section>
+
+        <section class="still-grid" id="still-grid" aria-label="Still archive"></section>
+      </section>
+
+      <section class="view" id="route-store" aria-labelledby="store-title">
+        <div class="page-intro">
+          <p class="eyebrow">field trip / two-mile radius</p>
+          <h1 id="store-title">the convenience store knows what people love.</h1>
+          <p>
+            a plastic-coated coupon can feel fancy. a glass bottle of milk can
+            feel like a luxury. the shelves are a map of daily life.
+          </p>
+        </div>
+
+        <section class="store-layout">
+          <div class="storefront">
+            <div class="store-sign">OPEN ALL NIGHT</div>
+            <div class="store-clock" id="store-clock">03:17</div>
+            <div class="shelves" id="shelves"></div>
+          </div>
+
+          <aside class="receipt">
+            <h2>receipt</h2>
+            <div id="receipt-lines" class="receipt-lines"></div>
+            <div class="receipt-total">
+              <span>total</span>
+              <strong id="receipt-total">$0.00</strong>
+            </div>
+            <button class="command primary wide" id="print-coupon" type="button">
+              print coupon
+            </button>
+            <div class="coupon" id="coupon">
+              <span>coupon</span>
+              <strong>5% off nostalgic milk</strong>
+              <small>valid when the errand randomly matters</small>
+            </div>
+          </aside>
+        </section>
+      </section>
+
+      <section class="view" id="route-mail" aria-labelledby="mail-title">
+        <div class="page-intro">
+          <p class="eyebrow">one person / no audience</p>
+          <h1 id="mail-title">paper cups are better than feeds.</h1>
+          <p>
+            a message on a string is intimate because it has to be pointed at
+            someone. tell the people you love that you love them, and mean it.
+          </p>
+        </div>
+
+        <section class="mail-layout">
+          <div class="cup-phone" aria-label="Paper cup string phone">
+            <div class="paper-cup">
+              <span>A</span>
+            </div>
+            <div class="string">
+              <span id="traveling-message"></span>
+            </div>
+            <div class="paper-cup">
+              <span>B</span>
+            </div>
+          </div>
+
+          <aside class="tool-panel mail-desk">
+            <label for="letter-to">to</label>
+            <input id="letter-to" maxlength="32" placeholder="someone specific" />
+            <label for="letter-body">message</label>
+            <textarea
+              id="letter-body"
+              maxlength="260"
+              placeholder="one line, no performance"
+            ></textarea>
+            <div class="button-row">
+              <button class="command primary" id="send-letter" type="button">
+                send
+              </button>
+              <button class="command" id="clear-letters" type="button">clear</button>
+            </div>
+          </aside>
+        </section>
+
+        <section class="mail-bin" id="mail-bin" aria-label="Saved mailers"></section>
+      </section>
+
+      <section class="view" id="route-fieldbook" aria-labelledby="fieldbook-title">
+        <div class="page-intro">
+          <p class="eyebrow">notes after the credits</p>
+          <h1 id="fieldbook-title">not a resume. a fieldbook.</h1>
+          <p>
+            coding is creative, but the point is still emotion, taste, real
+            people, useful bluntness, and the discipline to turn rough material
+            into gold.
+          </p>
+        </div>
+
+        <section class="fieldbook-layout">
+          <div class="notes-board" id="notes-board"></div>
+
+          <aside class="workbench">
+            <h2>customer day</h2>
+            <p>
+              the preferred calendar is mostly real conversations and a small
+              pocket of making.
+            </p>
+            <label for="customer-range">customer hours</label>
+            <input id="customer-range" type="range" min="20" max="90" value="80" />
+            <div class="split-meter">
+              <span id="customer-percent">80%</span>
+              <span id="build-percent">20%</span>
+            </div>
+            <div class="calendar-strip" id="calendar-strip"></div>
+            <h2>taste check</h2>
+            <div class="taste-list" id="taste-list"></div>
+          </aside>
+        </section>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
