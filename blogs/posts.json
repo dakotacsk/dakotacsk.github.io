@@ -1,5 +1,13 @@
 [
   {
+    "id": "car-sick",
+    "title": "Car Sick",
+    "date": "2026-07-12",
+    "tags": ["Life"],
+    "excerpt": "Smooth operatooooooorrrr - Carlos Sainz",
+    "file": "car-sick.md"
+  },
+  {
     "id": "skydiving",
     "title": "Skydiving and Singularity",
     "date": "2026-05-05",
